@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ron Bulaon</title>
+    <link>https://ronbulaon.github.io/tags/</link>
+    <description>Recent content in Tags on Ron Bulaon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 21 May 2022 23:17:31 -0500</lastBuildDate><atom:link href="https://ronbulaon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>123</title>
+      <link>https://ronbulaon.github.io/tags/123/</link>
+      <pubDate>Sat, 21 May 2022 23:17:31 -0500</pubDate>
+      
+      <guid>https://ronbulaon.github.io/tags/123/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ABC</title>
+      <link>https://ronbulaon.github.io/tags/abc/</link>
+      <pubDate>Sat, 21 May 2022 23:17:31 -0500</pubDate>
+      
+      <guid>https://ronbulaon.github.io/tags/abc/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
