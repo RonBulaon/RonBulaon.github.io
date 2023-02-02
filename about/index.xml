@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on </title>
+    <link>/about/</link>
+    <description>Recent content in About on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Feb 2023 00:48:40 -0600</lastBuildDate><atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me!</title>
+      <link>/about/about/</link>
+      <pubDate>Thu, 02 Feb 2023 00:48:40 -0600</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description>Proactive and results-driven IT professional with a passion for problem-solving and a strong track record in modern technology. Proven ability to adapt to changing business needs through extensive research and experience in various areas of IT, including networking, helpdesk operations, server administration, virtualization, application development, training, and security. Led successful IT projects and implemented innovative solutions to improve efficiency and security.
+Holds a Bachelor&amp;rsquo;s Degree in Computer Science and currently pursuing a Postgraduate Diploma in Network Security and Management at the University of Winnipeg.</description>
+    </item>
+    
+  </channel>
+</rss>
