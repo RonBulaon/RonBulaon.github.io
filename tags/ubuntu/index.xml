@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on </title>
+    <link>/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Feb 2023 12:33:09 -0600</lastBuildDate><atom:link href="/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Application Server</title>
+      <link>/posts/pythonnginx/</link>
+      <pubDate>Thu, 02 Feb 2023 12:33:09 -0600</pubDate>
+      
+      <guid>/posts/pythonnginx/</guid>
+      <description>In this post, I will be providing an overview on how I set up an application server to host my Python data visualization using popular frameworks like Bokeh or Dash. The server is built on Ubuntu and utilizes Nginx as a reverse proxy and Certbot for securing the connection with HTTPS.
+Please note that this guide is not exhaustive or highly detailed, as it is intended for internal access and use only.</description>
+    </item>
+    
+  </channel>
+</rss>

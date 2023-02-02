@@ -5,6 +5,25 @@
     <link>/series/</link>
     <description>Recent content in Series on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Feb 2023 14:50:33 -0600</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Windows Environment</title>
+      <link>/series/building-windows-environment/</link>
+      <pubDate>Thu, 02 Feb 2023 14:50:33 -0600</pubDate>
+      
+      <guid>/series/building-windows-environment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux Servers</title>
+      <link>/series/linux-servers/</link>
+      <pubDate>Thu, 02 Feb 2023 12:33:09 -0600</pubDate>
+      
+      <guid>/series/linux-servers/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

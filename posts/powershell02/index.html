@@ -21,8 +21,8 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title></title>
-    <meta name="description" content="Build - Secure - Innovate" />
+    <title>Join Windows 10 to Aactive Directory using PowerShell &middot; </title>
+    <meta name="description" content="" />
 
     
     <link type="text/css" rel="stylesheet" href="/css/poole.css">
@@ -35,7 +35,6 @@
 
 
     
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="" />
     
     <style>
     body {
@@ -193,10 +192,8 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </aside>
 
         <main class="content container">
-            <div class="posts">
-    
-    <article class="post">
-        <div class="info">
+            <div class="post">
+  <div class="info">
     <h1 class="post-title">
         <a href="/posts/powershell02/">Join Windows 10 to Aactive Directory using PowerShell</a>
     </h1>
@@ -243,183 +240,123 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
 </div>
 
-        *Note : This is part of a series for how I build Windows Enterprise Test environment. *
-In this guide, I will walk you through the steps to configure a newly installed Windows 10 machine to join an existing Active Directory domain using PowerShell. The commands for the configuration process will be included in a script and each command will be thoroughly explained to help you understand the process.
-By the end of this tutorial, you will have a clear understanding of how to join a Windows 10 machine to an Active Directory domain using PowerShell.
-        
-        <div class="read-more-link">
-            <a href="/posts/powershell02/">Read More…</a>
-        </div>
-        
-    </article>
-    <article class="post">
-        <div class="info">
-    <h1 class="post-title">
-        <a href="/posts/powershell01/">Install and Configure Active Directory using PowerShell</a>
-    </h1>
-    <time datetime="2023-02-02T14:06:15-0600" class="post-date">
-        February 2, 2023
-    </time>
+  <p>*Note : This is part of a series for how I build Windows Enterprise Test environment. *</p>
+<p>In this guide, I will walk you through the steps to configure a newly installed Windows 10 machine to join an existing Active Directory domain using PowerShell. The commands for the configuration process will be included in a script and each command will be thoroughly explained to help you understand the process.</p>
+<p>By the end of this tutorial, you will have a clear understanding of how to <strong>join a Windows 10 machine to an Active Directory</strong> domain using PowerShell.</p>
+<br/>
+<h2>Table of Contents</h2>
+<!-- TOC -->
+<ul>
+<li><a href="#update-local-computer-settings">Update Local Computer Settings</a></li>
+<li><a href="#join-domain">Join Domain</a></li>
+<li><a href="#final-script">Final Script</a></li>
+<li><a href="#testing-and-conclusion">Testing and conclusion</a></li>
+</ul>
+<!-- /TOC -->
+<br/>
+<h2 id="update-local-computer-settings">Update Local Computer Settings</h2>
+<ul>
+<li>Allow use of PowerShell
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-ExecutionPolicy RemoteSigned -Confirm:$False
+</span></span></code></pre></div></li>
+<li>Computer name
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Rename-Computer -NewName client1
+</span></span></code></pre></div></li>
+<li>Network Configuration
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>New-NetIPAddress -IPAddress <span style="color:#ae81ff">192.168</span>.1.21 -DefaultGateway <span style="color:#ae81ff">192.168</span>.1.1 -PrefixLength <span style="color:#ae81ff">24</span> -InterfaceIndex (Get-NetAdapter).InterfaceIndex 
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceIndex (Get-NetAdapter).InterfaceIndex  -ServerAddresses (<span style="color:#e6db74">&#34;192.168.1.10&#34;</span>)
+</span></span></code></pre></div><ul>
+<li>Notes:
+<ul>
+<li>If you have a DHCP in your environment, you can skip this. But you have to ensure that the client machine and the active diretory can <code>ping</code> each other.</li>
+<li>Your DNS server/IP should be your <a href="powershell01.md">Active Directory</a></li>
+<li>If you have more than 1 network adapter, get the value of your <code>InterfaceIndex</code> by running this command (below) and take note of the value for your network interface and use it as your <code>InterfaceIndex</code> in the command above .
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>(Get-NetAdapter).InterfaceIndex
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h2 id="join-domain">Join Domain</h2>
+<ul>
+<li>In order for this to be successful you must know the active directory admnistrator credentials.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$Username = <span style="color:#e6db74">&#34;ronwork.com\administrator&#34;</span> 
+</span></span><span style="display:flex;"><span>$Password = ConvertTo-SecureString <span style="color:#e6db74">&#34;P@55w0rd&#34;</span> -AsPlainText -Force 
+</span></span><span style="display:flex;"><span>$Credential = New-Object System.Management.Automation.PSCredential($Username, $Password) 
+</span></span><span style="display:flex;"><span>Add-Computer -DomainName <span style="color:#e6db74">&#34;ronwork.com&#34;</span> -Credential $Credential 
+</span></span><span style="display:flex;"><span>Add-Computer -DomainName <span style="color:#e6db74">&#34;ronwork.com&#34;</span> -OUPath <span style="color:#e6db74">&#34;OU=Computers,DC=example,DC=com&#34;</span> -Credential $Credential -Restart -Force 
+</span></span></code></pre></div></li>
+</ul>
+<br/>
+<h2 id="final-script">Final Script</h2>
+<ul>
+<li>
+<p>Filename : LocalSettings.ps1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-ExecutionPolicy RemoteSigned -Confirm:$False
+</span></span><span style="display:flex;"><span>New-NetIPAddress -IPAddress <span style="color:#ae81ff">192.168</span>.1.21 -DefaultGateway <span style="color:#ae81ff">192.168</span>.1.1 -PrefixLength <span style="color:#ae81ff">24</span> -InterfaceIndex (Get-NetAdapter).InterfaceIndex 
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceIndex (Get-NetAdapter).InterfaceIndex  -ServerAddresses (<span style="color:#e6db74">&#34;192.168.1.10&#34;</span>)
+</span></span><span style="display:flex;"><span>Restart-Computer -Force 
+</span></span></code></pre></div></li>
+<li>
+<p>Filename : joinDomain.ps1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$Username = <span style="color:#e6db74">&#34;ronwork.com\administrator&#34;</span> 
+</span></span><span style="display:flex;"><span>$Password = ConvertTo-SecureString <span style="color:#e6db74">&#34;P@55w0rd&#34;</span> -AsPlainText -Force 
+</span></span><span style="display:flex;"><span>$Credential = New-Object System.Management.Automation.PSCredential($Username, $Password) 
+</span></span><span style="display:flex;"><span>Add-Computer -DomainName <span style="color:#e6db74">&#34;ronwork.com&#34;</span> -Credential $Credential 
+</span></span><span style="display:flex;"><span>Add-Computer -DomainName <span style="color:#e6db74">&#34;ronwork.com&#34;</span> -OUPath <span style="color:#e6db74">&#34;OU=Computers,DC=example,DC=com&#34;</span> -Credential $Credential -Restart -Force 
+</span></span></code></pre></div></li>
+</ul>
+<br/>
+<h2 id="testing-and-conclusion">Testing and conclusion</h2>
+<p><strong>Between the execution</strong> of these two scripts, <strong>the machine will require a restart</strong>. Upon successful restart, if the Active Directory is properly configured, and the client machine should be able to join the Active Directiry without any issues.</p>
+<p>To verify the setup, you can attempt to log in using the domain users created in the previous step of the guide, <a href="powershell01.md">Install and Configure Active Directory using PowerShell</a>.</p>
+
+  <hr>
+<div class="footer">
     
-    <ul class="tags">
-        
-        <li class="tag-active directory">
-            <a href="/tags/active-directory">active directory</a>
-        </li>
-        
-        <li class="tag-powershell">
-            <a href="/tags/powershell">powershell</a>
-        </li>
-        
-        <li class="tag-server">
-            <a href="/tags/server">server</a>
-        </li>
-        
-        <li class="tag-windows">
-            <a href="/tags/windows">windows</a>
-        </li>
-        
-        <li class="tag-scripting">
-            <a href="/tags/scripting">scripting</a>
-        </li>
-        
-        <li class="tag-automation">
-            <a href="/tags/automation">automation</a>
-        </li>
-        
-    </ul>
     
     
-    
-    
-        <p class="seriesname">
-            Series: <a href="/series/building-windows-environment">Building Windows Environment</a>
-        </p>
-    
-    
+    <p>
+    This is a post in the <b><a href="/series/building-windows-environment">Building Windows Environment</a></b> series.
+        <br>Other posts in this series:
+        <ul class="series">
+            
+            
+            
+            <li>
+                February 2, 2023 -
+                
+                    Join Windows 10 to Aactive Directory using PowerShell
+                
+            </li>
+            
+            <li>
+                February 2, 2023 -
+                
+                    <a href="/posts/powershell01/">Install and Configure Active Directory using PowerShell</a>
+                
+            </li>
+            
+        </ul>
+    </p>
     
 </div>
 
-        *Note : This is part of a series for how I build Windows Enterprise Test environment. *
-In this installment of the series, we will delve into the process of installing and configuring a Windows Active Directory using PowerShell. The goal is to simplify the installation procedure by compiling a set of PowerShell scripts, enabling the creation of a test environment with ease and convenience whenever an application needs to be tested.
-        
-        <div class="read-more-link">
-            <a href="/posts/powershell01/">Read More…</a>
-        </div>
-        
-    </article>
-    <article class="post">
-        <div class="info">
-    <h1 class="post-title">
-        <a href="/posts/pythonnginx/">Linux Application Server</a>
-    </h1>
-    <time datetime="2023-02-02T12:33:09-0600" class="post-date">
-        February 2, 2023
-    </time>
-    
-    <ul class="tags">
-        
-        <li class="tag-ubuntu">
-            <a href="/tags/ubuntu">ubuntu</a>
-        </li>
-        
-        <li class="tag-linux">
-            <a href="/tags/linux">linux</a>
-        </li>
-        
-        <li class="tag-apache2">
-            <a href="/tags/apache2">apache2</a>
-        </li>
-        
-        <li class="tag-nginx">
-            <a href="/tags/nginx">nginx</a>
-        </li>
-        
-        <li class="tag-certbot">
-            <a href="/tags/certbot">certbot</a>
-        </li>
-        
-        <li class="tag-python">
-            <a href="/tags/python">python</a>
-        </li>
-        
-    </ul>
-    
-    
-    
-    
-        <p class="seriesname">
-            Series: <a href="/series/linux-servers">Linux Servers</a>
-        </p>
-    
-    
-    
+  <div class="article-toc " >
+    <h4></h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#update-local-computer-settings">Update Local Computer Settings</a></li>
+    <li><a href="#join-domain">Join Domain</a></li>
+    <li><a href="#final-script">Final Script</a></li>
+    <li><a href="#testing-and-conclusion">Testing and conclusion</a></li>
+  </ul>
+</nav>
 </div>
 
-        In this post, I will be providing an overview on how I set up an application server to host my Python data visualization using popular frameworks like Bokeh or Dash. The server is built on Ubuntu and utilizes Nginx as a reverse proxy and Certbot for securing the connection with HTTPS.
-Please note that this guide is not exhaustive or highly detailed, as it is intended for internal access and use only.
-        
-        <div class="read-more-link">
-            <a href="/posts/pythonnginx/">Read More…</a>
-        </div>
-        
-    </article>
-    <article class="post">
-        <div class="info">
-    <h1 class="post-title">
-        <a href="/posts/passwdssh/">Passwordless Login through SSH</a>
-    </h1>
-    <time datetime="2023-02-02T10:36:00-0600" class="post-date">
-        February 2, 2023
-    </time>
-    
-    <ul class="tags">
-        
-        <li class="tag-linux">
-            <a href="/tags/linux">linux</a>
-        </li>
-        
-        <li class="tag-security">
-            <a href="/tags/security">security</a>
-        </li>
-        
-        <li class="tag-ssh">
-            <a href="/tags/ssh">ssh</a>
-        </li>
-        
-        <li class="tag-passwords">
-            <a href="/tags/passwords">passwords</a>
-        </li>
-        
-        <li class="tag-system administration">
-            <a href="/tags/system-administration">system administration</a>
-        </li>
-        
-    </ul>
-    
-    
-    
-    
-        <p class="seriesname">
-            Series: <a href="/series/linux-servers">Linux Servers</a>
-        </p>
-    
-    
-    
 </div>
-
-        Passwordless SSH logins offer a secure and efficient way to access remote servers. Unlike traditional authentication methods that rely on passwords, passwordless SSH utilizes cryptographic keys to verify your identity. This eliminates the need to constantly enter your username and password, making it faster and more convenient.
-It&rsquo;s widely recognized that passwords are vulnerable to hacking and brute force attacks. By using passwordless SSH, you can significantly enhance the security of your remote connections.
-        
-        <div class="read-more-link">
-            <a href="/posts/passwdssh/">Read More…</a>
-        </div>
-        
-    </article>
-</div>
-
-
-
         </main>
     </body>
 </html>
