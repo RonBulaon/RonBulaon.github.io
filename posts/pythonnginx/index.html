@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    <script defer language="javascript" type="text/javascript" src="/js/light_dark.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/tabs.js"></script>
+
+
+<script defer language="javascript" type="text/javascript" src="/js/katex.min.js"></script>
+
+
+<script defer language="javascript" type="text/javascript" src="/js/auto-render.min.js"></script>
+
+
+<script defer language="javascript" type="text/javascript" src="/js/katex.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/toc.js"></script>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="generator" content="Hugo 0.110.0">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Linux Application Server &middot; </title>
+    <meta name="description" content="" />
+
+    
+    <link type="text/css" rel="stylesheet" href="/css/poole.css">
+<link type="text/css" rel="stylesheet" href="/css/syntax.css">
+<link type="text/css" rel="stylesheet" href="/css/hyde.css">
+<link type="text/css" rel="stylesheet" href="/css/poison.css">
+<link type="text/css" rel="stylesheet" href="/css/fonts.css">
+<link type="text/css" rel="stylesheet" href="/css/katex.min.css">
+<link type="text/css" rel="stylesheet" href="/css/tabs.css">
+
+
+    
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --code-color: #bf616a;
+        --code-background-color: #f9f9f9;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --code-color: #ff7f7f;
+        --code-background-color: #393D47;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LX7DVC3P8K');
+    </script>
+</head>
+
+    <body class="">
+        <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="/">
+                <img src="/images/profilepix.jpeg" alt="brand image">
+            </a>
+        
+        
+            <a href="/">
+                <h1>Ron Bulaon</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    Build - Secure - Innovate
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+        
+        
+        
+        
+            
+                
+                    <li class="heading">
+                        <a href="/about/">About</a>
+                    </li>
+                    
+                
+            
+                
+            
+        
+        
+            
+                
+            
+                
+            
+        
+        
+            
+                
+            
+                
+                    <li class="heading">
+                        <a href="/posts/">Posts</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            Recent
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/bof/">Buffer Overflow</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/powershell02/">Join Windows 10 to Active Directory using PowerShell</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/powershell01/">Install and Configure Active Directory using PowerShell</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/pythonnginx/">Linux Application Server</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/posts/passwdssh/">Passwordless Login through SSH</a>
+                            </li>
+                        
+                    
+                
+            
+        
+
+    </ul>
+</nav>
+
+        
+    <a target="_blank" class="social" href="https://github.com/RonBulaon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+    <a target="_blank" class="social" href="https://www.linkedin.com/in/ronbulaon/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+    <a target="_blank" class="social" href="https://www.youtube.com/c/RonBulaon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+
+
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2023 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+        <main class="content container">
+            <div class="post">
+  <div class="info">
+    <h1 class="post-title">
+        <a href="/posts/pythonnginx/">Linux Application Server</a>
+    </h1>
+    <time datetime="2023-02-02T12:33:09-0600" class="post-date">
+        February 2, 2023
+    </time>
+    
+    <ul class="tags">
+        
+        <li class="tag-ubuntu">
+            <a href="/tags/ubuntu">ubuntu</a>
+        </li>
+        
+        <li class="tag-linux">
+            <a href="/tags/linux">linux</a>
+        </li>
+        
+        <li class="tag-apache2">
+            <a href="/tags/apache2">apache2</a>
+        </li>
+        
+        <li class="tag-nginx">
+            <a href="/tags/nginx">nginx</a>
+        </li>
+        
+        <li class="tag-certbot">
+            <a href="/tags/certbot">certbot</a>
+        </li>
+        
+        <li class="tag-python">
+            <a href="/tags/python">python</a>
+        </li>
+        
+    </ul>
+    
+    
+    
+    
+        <p class="seriesname">
+            Series: <a href="/series/linux-servers">Linux Servers</a>
+        </p>
+    
+    
+    
+</div>
+
+  <p>In this post, I will be providing an overview on how I set up an application server to host my <strong>Python data visualization</strong> using popular frameworks like <strong>Bokeh</strong> or <strong>Dash</strong>. The server is built on Ubuntu and utilizes <strong>Nginx</strong> as a reverse proxy and Certbot for securing the connection with <strong>HTTPS</strong>.</p>
+<p>Please note that this guide is <strong>not exhaustive</strong> or highly detailed, <strong>as it is intended for internal access and use only</strong>. The firewall configuration is also not covered in this guide as it is usually handled in the Azure environment that I frequently use.</p>
+<p>It is important to understand that this guide serves as a <strong>starting point</strong> and there may be additional steps required depending on your specific setup. Nonetheless, I hope this will give you a general idea on how to set up an application server for your data visualization.</p>
+<p>Get ready to dive into the world of application servers and start serving your data to the world!
+<br/><br/></p>
+<h2>Table of Contents</h2>
+<!-- TOC -->
+<ul>
+<li><a href="#update-to-pip3">Update to pip3</a></li>
+<li><a href="#install-git-and-clone-a-repository">Install Git and Clone a Repository</a></li>
+<li><a href="#install-python-libraries-and-run-apppy">Install Python libraries and Run App.py</a></li>
+<li><a href="#install-nginx-and-configure">Install Nginx and Configure</a></li>
+<li><a href="#restart-nginx">Restart Nginx</a></li>
+<li><a href="#install-cerbot">Install Cerbot</a></li>
+<li><a href="#testing">Testing</a></li>
+</ul>
+<!-- /TOC -->
+<br/>
+<h2 id="update-to-pip3">Update to pip3</h2>
+<p>Upgrading to pip3 ensures that the correct version of pip is installed for python3, which is the recommended version for current python development.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo add-apt-repository universe
+</span></span><span style="display:flex;"><span>$ sudo apt update
+</span></span><span style="display:flex;"><span>$ sudo apt upgrade
+</span></span><span style="display:flex;"><span>$ sudo apt install python3-pip
+</span></span><span style="display:flex;"><span>$ pip3 --version
+</span></span></code></pre></div><br/>
+<h2 id="install-git-and-clone-a-repository">Install Git and Clone a Repository</h2>
+<p>Install Git on your server and use it to clone the repository of your Python application</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install git</span>
+</span></span><span style="display:flex;"><span>$ sudo apt install git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify git is installed</span>
+</span></span><span style="display:flex;"><span>$ git --version
+</span></span><span style="display:flex;"><span>$ git config --global user.name <span style="color:#e6db74">&#34;username&#34;</span>
+</span></span><span style="display:flex;"><span>$ git config --global user.email <span style="color:#e6db74">&#34;your@email.com&#34;</span>
+</span></span><span style="display:flex;"><span>$ git config --list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># For initial clone credentials are required</span>
+</span></span><span style="display:flex;"><span>$ git clone https://&lt;githubUserNane&gt;:&lt;password&gt;@github.com/&lt;git_path_url&gt;.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cache the credentials</span>
+</span></span><span style="display:flex;"><span>$ git config --global credential.helper cache. 
+</span></span><span style="display:flex;"><span>$ cd &lt;repo_name&gt;
+</span></span></code></pre></div><p>On your subsequent pull use this instead</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git pull &lt;githubUserNane&gt;:&lt;password&gt;@github.com/git_path_url&gt;.git
+</span></span></code></pre></div><br/>
+<h2 id="install-python-libraries-and-run-apppy">Install Python libraries and Run App.py</h2>
+<p>Once you have cloned or downloaded the code for your Python application, the next step is to install the necessary libraries. Keep in mind that the main function of Flask is typically saved as app.py, but make sure to adjust this if you have saved your function under a different name.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pip3 install -r requirements.txt  <span style="color:#75715e"># Optional</span>
+</span></span><span style="display:flex;"><span>$ python3 app.py                    <span style="color:#75715e"># Test the application</span>
+</span></span></code></pre></div><p>Here&rsquo;s a sample <code>app.py</code> using dash.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> dash
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> dash_core_components <span style="color:#66d9ef">as</span> dcc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> dash_html_components <span style="color:#66d9ef">as</span> html
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app <span style="color:#f92672">=</span> dash<span style="color:#f92672">.</span>Dash()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>app<span style="color:#f92672">.</span>layout <span style="color:#f92672">=</span> html<span style="color:#f92672">.</span>Div(children<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>    html<span style="color:#f92672">.</span>H1(children<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Dash Tutorials&#39;</span>),
+</span></span><span style="display:flex;"><span>        dcc<span style="color:#f92672">.</span>Graph(
+</span></span><span style="display:flex;"><span>        id<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;example&#39;</span>,
+</span></span><span style="display:flex;"><span>        figure<span style="color:#f92672">=</span>{
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;data&#39;</span>: [
+</span></span><span style="display:flex;"><span>                {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;line&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Boats&#39;</span>},
+</span></span><span style="display:flex;"><span>                {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">3</span>], <span style="color:#e6db74">&#39;type&#39;</span>: <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;Cars&#39;</span>},
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;layout&#39;</span>: {
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;title&#39;</span>: <span style="color:#e6db74">&#39;Basic Dash Example&#39;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    app<span style="color:#f92672">.</span>run_server(debug<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><br/>
+<h2 id="install-nginx-and-configure">Install Nginx and Configure</h2>
+<p>In this step, we will be installing Nginx, a popular open source web server and reverse proxy, and setting it up to act as a reverse proxy for our Python application. This will allow us to serve our application over the network using Nginx as an intermediary between the any user and our application server.</p>
+<p>The configuration process involves mapping requests to the appropriate location on our application server, and ensuring that data is securely transmitted. By using Nginx as a reverse proxy, we can provide an additional layer of security, performance optimization, and scalability to our application setup.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo apt-get install nginx
+</span></span><span style="display:flex;"><span>$ sudo vi /etc/nginx/sites-enabled/default <span style="color:#75715e"># see below</span>
+</span></span></code></pre></div><p>This notice that this configutaion file below is only for HTTP we will configure HTTPS later on.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># filename : /etc/nginx/sites-enabled/default</span>
+</span></span><span style="display:flex;"><span>server <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        listen <span style="color:#ae81ff">80</span> default_server;
+</span></span><span style="display:flex;"><span>        listen <span style="color:#f92672">[</span>::<span style="color:#f92672">]</span>:80 default_server;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        root /var/www/html;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        index index.html index.htm index.nginx-debian.html;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            server_name _;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            location / <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                proxy_set_header X-Forwarded-For 
+</span></span><span style="display:flex;"><span>                proxy_set_header Host $http_host;
+</span></span><span style="display:flex;"><span>                proxy_set_header X-NginX-Proxy true;
+</span></span><span style="display:flex;"><span>                proxy_set_header X-Script-Name /godash;
+</span></span><span style="display:flex;"><span>                proxy_add_x_forwarded_for;
+</span></span><span style="display:flex;"><span>                proxy_http_version 1.1;
+</span></span><span style="display:flex;"><span>                proxy_set_header Upgrade $http_upgrade;
+</span></span><span style="display:flex;"><span>                proxy_set_header Connection <span style="color:#e6db74">&#34;upgrade&#34;</span>;
+</span></span><span style="display:flex;"><span>                proxy_max_temp_file_size 0;
+</span></span><span style="display:flex;"><span>                rewrite /dashboard/<span style="color:#f92672">(</span>.*<span style="color:#f92672">)</span> /dashboard/$1  break;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><br/>
+<h2 id="restart-nginx">Restart Nginx</h2>
+<p>Before (re)starting the Nginx service, it&rsquo;s important to run a configuration test to ensure that the configuration file is error-free. After the test has passed, you can safely restart Nginx to apply the new settings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nginx  -t                <span style="color:#75715e"># test config file</span>
+</span></span><span style="display:flex;"><span>$ sudo nginx -s  reload         <span style="color:#75715e"># Restart nginx</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># or Restart usinng systemctl</span>
+</span></span><span style="display:flex;"><span>$ sudo systemctl stop nginx     <span style="color:#75715e"># stop</span>
+</span></span><span style="display:flex;"><span>$ sudo systemctl start nginx    <span style="color:#75715e"># start</span>
+</span></span><span style="display:flex;"><span>$ sudo systemctl reload nginx   <span style="color:#75715e"># restart</span>
+</span></span></code></pre></div><br/>
+<h2 id="install-cerbot">Install Cerbot</h2>
+<p>For enhanced security, we will be utilizing <a href="https://certbot.eff.org/">Certbot</a>, a free and open source solution that allows us to easily obtain and install SSL/TLS certificates from the trusted certificate authority, <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. This will secure the communication between the server and clients, ensuring that all data transmitted is protected and private.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo snap install core; sudo snap refresh core   
+</span></span><span style="display:flex;"><span>$ sudo snap install --classic certbot
+</span></span><span style="display:flex;"><span>$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+</span></span><span style="display:flex;"><span>$ sudo certbot --nginx          <span style="color:#75715e"># follow installation prompts</span>
+</span></span><span style="display:flex;"><span>$ sudo certbot renew --dry-run  <span style="color:#75715e"># dry-run for auto renew</span>
+</span></span></code></pre></div><ul>
+<li><code>dry-run</code> is to ensure that the auto renew can be executed without errors.</li>
+<li>Notice that your <code>/etc/nginx/sites-enabled/default</code> will be updated.</li>
+</ul>
+<br/>
+<h2 id="testing">Testing</h2>
+<p>If everything was installed and configured correctly, your python application should now be accessible at <strong>https://&lt;domain_or_localhost&gt;</strong>, ready to be viewed and explored by users!</p>
+
+  <hr>
+<div class="footer">
+    
+    
+    
+    <p>
+    This is a post in the <b><a href="/series/linux-servers">Linux Servers</a></b> series.
+        <br>Other posts in this series:
+        <ul class="series">
+            
+            
+            
+            <li>
+                February 2, 2023 -
+                
+                    Linux Application Server
+                
+            </li>
+            
+            <li>
+                February 2, 2023 -
+                
+                    <a href="/posts/passwdssh/">Passwordless Login through SSH</a>
+                
+            </li>
+            
+        </ul>
+    </p>
+    
+</div>
+
+  <div class="article-toc " >
+    <h4></h4>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#update-to-pip3">Update to pip3</a></li>
+    <li><a href="#install-git-and-clone-a-repository">Install Git and Clone a Repository</a></li>
+    <li><a href="#install-python-libraries-and-run-apppy">Install Python libraries and Run App.py</a></li>
+    <li><a href="#install-nginx-and-configure">Install Nginx and Configure</a></li>
+    <li><a href="#restart-nginx">Restart Nginx</a></li>
+    <li><a href="#install-cerbot">Install Cerbot</a></li>
+    <li><a href="#testing">Testing</a></li>
+  </ul>
+</nav>
+</div>
+
+</div>
+        </main>
+    </body>
+</html>
