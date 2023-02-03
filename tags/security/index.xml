@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on </title>
+    <link>/tags/security/</link>
+    <description>Recent content in security on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2023 00:28:29 -0600</lastBuildDate><atom:link href="/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Buffer Overflow</title>
+      <link>/posts/bof/</link>
+      <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
+      
+      <guid>/posts/bof/</guid>
+      <description>Buffer overflow attacks have been a topic of discussion in the cybersecurity world for a long time, but I believe there&amp;rsquo;s always room for another perspective.
+In this writeup, I will take a unique approach and walk you through the process of executing a buffer overflow attack using VSCode as my code editor and BurpSuite to generate the initial request in Python.
+My goal is to provide a clear and concise explanation of this complex topic, so that even those with limited experience can understand the mechanics behind buffer overflow attacks.</description>
+    </item>
+    
+    <item>
+      <title>Passwordless Login through SSH</title>
+      <link>/posts/passwdssh/</link>
+      <pubDate>Thu, 02 Feb 2023 10:36:00 -0600</pubDate>
+      
+      <guid>/posts/passwdssh/</guid>
+      <description>Passwordless SSH logins offer a secure and efficient way to access remote servers. Unlike traditional authentication methods that rely on passwords, passwordless SSH utilizes cryptographic keys to verify your identity. This eliminates the need to constantly enter your username and password, making it faster and more convenient.
+It&amp;rsquo;s widely recognized that passwords are vulnerable to hacking and brute force attacks. By using passwordless SSH, you can significantly enhance the security of your remote connections.</description>
+    </item>
+    
+  </channel>
+</rss>
