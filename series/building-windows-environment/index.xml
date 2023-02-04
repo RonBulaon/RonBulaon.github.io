@@ -6,11 +6,11 @@
     <description>Recent content in Building Windows Environment on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Feb 2023 14:50:33 -0600</lastBuildDate><atom:link href="/series/building-windows-environment/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 14:50:33 -0600</lastBuildDate><atom:link href="/series/building-windows-environment/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Join Windows 10 to Active Directory using PowerShell</title>
       <link>/posts/powershell02/</link>
-      <pubDate>Thu, 02 Feb 2023 14:50:33 -0600</pubDate>
+      <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
       
       <guid>/posts/powershell02/</guid>
       <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *
@@ -21,7 +21,7 @@ By the end of this tutorial, you will have a clear understanding of how to join 
     <item>
       <title>Install and Configure Active Directory using PowerShell</title>
       <link>/posts/powershell01/</link>
-      <pubDate>Thu, 02 Feb 2023 14:06:15 -0600</pubDate>
+      <pubDate>Mon, 02 Jan 2023 14:06:15 -0600</pubDate>
       
       <guid>/posts/powershell01/</guid>
       <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *
