@@ -215,7 +215,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
             <div class="post">
   <div class="info">
     <h1 class="post-title">
-        <a href="/posts/bof/">Buffer Overflow</a>
+        <a href="/featured/bof/">Buffer Overflow</a>
     </h1>
     <time datetime="2023-02-03T00:28:29-0600" class="post-date">
         February 3, 2023
@@ -267,12 +267,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   <p>Buffer overflow attacks have been a topic of discussion in the cybersecurity world for a long time, but I believe there&rsquo;s always room for another perspective.</p>
 <p>In this writeup, I will take a unique approach and walk you through the process of executing a buffer overflow attack using VSCode as my code editor and BurpSuite to generate the initial request in Python.</p>
 <p>My goal is to provide a clear and concise explanation of this complex topic, so that even those with limited experience can understand the mechanics behind buffer overflow attacks.</p>
-<p><img src="/images/reverseShell.gif" alt="Reverse Shell"/><br/></p>
-<h1 id="overview">Overview</h1>
-<p>In this simulation, I aim to uncover vulnerabilities in the application &lsquo;Sync Breeze.&rsquo; After some research, I have found that this specific version of the application is susceptible to buffer overflow attacks. Thus a good sample to test out my buffer overflow sequence.</p>
-<p>The process involves fuzzing the application to determine its vulnerability, then locating the memory location of the EIP. Once the EIP is found, I will inject instructions to redirect it to a custom-crafted shellcode to take over the system.</p>
-<p>This write-up is an actual simulation I did. I welcome constructive feedback and suggestions for improvement. If you notice anything that needs correction, please let me know.</p>
-<br/>
+<img src="/images/reverseShell.gif" alt="Reverse Shell"/>
 <!-- TOC ignore:true --> 
 <h2>Table of Contents</h2> 
 <!-- TOC -->
@@ -306,6 +301,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <li><a href="#gaining-shell">Gaining Shell</a></li>
 </ul>
 <!-- /TOC -->
+<br/>
+<h1 id="overview">Overview</h1>
+<p>In this simulation, I aim to uncover vulnerabilities in the application &lsquo;Sync Breeze.&rsquo; After some research, I have found that this specific version of the application is susceptible to buffer overflow attacks. Thus a good sample to test out my buffer overflow sequence.</p>
+<p>The process involves fuzzing the application to determine its vulnerability, then locating the memory location of the EIP. Once the EIP is found, I will inject instructions to redirect it to a custom-crafted shellcode to take over the system.</p>
+<p>This write-up is an actual simulation I did. I welcome constructive feedback and suggestions for improvement. If you notice anything that needs correction, please let me know.</p>
 <br/>
 <h1 id="requirements">Requirements</h1>
 <h2 id="system-requirements">System Requirements</h2>
