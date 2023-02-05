@@ -267,12 +267,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   <p>Buffer overflow attacks have been a topic of discussion in the cybersecurity world for a long time, but I believe there&rsquo;s always room for another perspective.</p>
 <p>In this writeup, I will take a unique approach and walk you through the process of executing a buffer overflow attack using VSCode as my code editor and BurpSuite to generate the initial request in Python.</p>
 <p>My goal is to provide a clear and concise explanation of this complex topic, so that even those with limited experience can understand the mechanics behind buffer overflow attacks.</p>
-<p><img src="/images/reverseShell.gif" alt="Reverse Shell"/><br/></p>
-<h1 id="overview">Overview</h1>
-<p>In this simulation, I aim to uncover vulnerabilities in the application &lsquo;Sync Breeze.&rsquo; After some research, I have found that this specific version of the application is susceptible to buffer overflow attacks. Thus a good sample to test out my buffer overflow sequence.</p>
-<p>The process involves fuzzing the application to determine its vulnerability, then locating the memory location of the EIP. Once the EIP is found, I will inject instructions to redirect it to a custom-crafted shellcode to take over the system.</p>
-<p>This write-up is an actual simulation I did. I welcome constructive feedback and suggestions for improvement. If you notice anything that needs correction, please let me know.</p>
-<br/>
+<img src="/images/reverseShell.gif" alt="Reverse Shell"/>
 <!-- TOC ignore:true --> 
 <h2>Table of Contents</h2> 
 <!-- TOC -->
@@ -306,6 +301,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <li><a href="#gaining-shell">Gaining Shell</a></li>
 </ul>
 <!-- /TOC -->
+<br/>
+<h1 id="overview">Overview</h1>
+<p>In this simulation, I aim to uncover vulnerabilities in the application <strong>Sync Breeze</strong>. After some research, I have found that this specific version of the application is susceptible to buffer overflow attacks. Thus a good sample to test out my buffer overflow sequence.</p>
+<p>The process involves fuzzing the application to determine its vulnerability, then locating the memory location of the EIP. Once the EIP is found, I will inject instructions to redirect it to a custom-crafted shellcode to take over the system.</p>
+<p>This write-up is an actual simulation I did. I welcome constructive feedback and suggestions for improvement. If you notice anything that needs correction, please let me know.</p>
 <br/>
 <h1 id="requirements">Requirements</h1>
 <h2 id="system-requirements">System Requirements</h2>
@@ -352,7 +352,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <img src="/images/burpsuiteRequest.png"/></li>
 <li>On your code editor, paste copied requests from Buprsuite. <br />
 <img src="/images/pasteInVSCode.png" alt="Paste in VS Code" width="500"/></li>
-<li>Edit the code to match the code below. Chang the IP address to match yours.
+<li>Edit the code to match the code below. Change the IP address to match yours.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> time
 </span></span><span style="display:flex;"><span>
@@ -434,7 +434,7 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">except</span>:
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;crashed&#34;</span>)
 </span></span></code></pre></div><p>Make sure <a href="#attach-sync-breeze-service-to-immunuty-debugger">Sync Breeze is running</a> then execute this code. We are expecting a crash similar to the access violation we had earlier.</p>
-<p>To determine <strong>EIP&rsquo;s exact location</strong>, instead using 800 characters of A, we&rsquo;ll be a string with non repeating pattern. We&rsquo;ll then check the EIP value once it crashed to determine how much buffer we actually need to write the EIP.</p>
+<p>To determine <strong>EIP&rsquo;s exact location</strong>, instead using 800 characters of <strong>A</strong>, we&rsquo;ll be using a string with non repeating pattern. We&rsquo;ll then check the EIP value once it crashed to determine how much buffer we actually need to write the EIP.</p>
 <ol>
 <li>
 <p>Generate the string of non-repeating pattern using a metasploit tool (installed by default at kali).</p>
@@ -477,7 +477,7 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 <p><a href="#overview">Back to top</a></p>
 <br/>
 <h2 id="controlling-eip">Controlling EIP</h2>
-<p>Controlling the value of the Extended Instruction Pointer (EIP) register is important in buffer overflow attacks because it determines the flow of execution in the vulnerable application.</p>
+<p>Controlling the value of the Extended Instruction Pointer (<strong>EIP</strong>) register is important in buffer overflow attacks because it determines the flow of execution in the vulnerable application.</p>
 <p>The EIP register holds the memory address of the next instruction that the application will execute. In a buffer overflow attack, the attacker seeks to control the value of the EIP register so that it points to malicious code, rather than the intended code.</p>
 <p>Now that we know the offset value. Let&rsquo;s make sure we can write to the EIP exactly what we wanted. Modify code to match this.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
@@ -557,13 +557,13 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 </span></span></code></pre></div><p>Make sure <a href="#attach-sync-breeze-service-to-immunuty-debugger">Sync Breeze is running</a> then execute this code. We are expecting a crash similar to the access violation we had earlier.</p>
 <p>At immunity debuuger, right click on <strong>ESP</strong> &gt; <strong>Follow in Dump</strong>. Then on dump section visually inspect the result and check for any missing characters.</p>
 <img src="/images/badchar1.png" alt="Badchar"/>
-<p>Below are an example of bad characters (picture is not from this example). <br/> <img src="/images/badcharSample.png" alt="drawing" width="400"/></p>
+<p>Below is an example of bad characters (picture is not from this example). <br/> <img src="/images/badcharSample.png" alt="drawing" width="400"/></p>
 <p>Take note of any bad characters found.</p>
 <p><a href="#overview">Back to top</a></p>
 <br>
 <h1 id="finding-jmp-esp">Finding JMP ESP</h1>
-<p>Finding the address of the &ldquo;JMP ESP&rdquo; instruction is important in buffer overflow attacks because it allows the attacker to redirect the flow of execution to their own malicious code.</p>
-<p>The JMP ESP instruction is a machine code instruction that causes the program to jump to the address specified in the ESP (Extended Stack Pointer) register. In a buffer overflow attack, the attacker seeks to place their malicious code at the address specified by the JMP ESP instruction and control the value of the ESP register so that it points to this address.</p>
+<p>Finding the address of the <strong>JMP ESP</strong> instruction is important in buffer overflow attacks because it allows the attacker to redirect the flow of execution to their own malicious code.</p>
+<p>The JMP ESP instruction is a machine code instruction that causes the program to jump to the address specified in the ESP (<strong>Extended Stack Pointer</strong>) register. In a buffer overflow attack, the attacker seeks to place their malicious code at the address specified by the JMP ESP instruction and control the value of the ESP register so that it points to this address.</p>
 <p>When the vulnerable application reaches the JMP ESP instruction, it will jump to the attacker&rsquo;s malicious code, executing it with the same level of privileges as the vulnerable application. This allows the attacker to execute arbitrary code and carry out malicious actions.</p>
 <ol>
 <li>Download <a href="https://github.com/corelan/mona">mona.py</a> and save it at <code>C:\Program Files (x86)\Immunity Inc\Immunity Debugger\PyCommands</code>
