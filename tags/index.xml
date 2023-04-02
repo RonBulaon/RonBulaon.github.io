@@ -6,22 +6,67 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2023 00:28:29 -0600</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>burpsuite</title>
       <link>/tags/burpsuite/</link>
-      <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       
       <guid>/tags/burpsuite/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>CTF</title>
+      <link>/tags/ctf/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      
+      <guid>/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>hacking</title>
       <link>/tags/hacking/</link>
-      <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       
       <guid>/tags/hacking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kali</title>
+      <link>/tags/kali/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      
+      <guid>/tags/kali/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pentesting</title>
+      <link>/tags/pentesting/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      
+      <guid>/tags/pentesting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>/tags/security/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      
+      <guid>/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vulnhub</title>
+      <link>/tags/vulnhub/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      
+      <guid>/tags/vulnhub/</guid>
       <description></description>
     </item>
     
@@ -31,24 +76,6 @@
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
       
       <guid>/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pentesting</title>
-      <link>/tags/pentesting/</link>
-      <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
-      
-      <guid>/tags/pentesting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>/tags/security/</link>
-      <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
-      
-      <guid>/tags/security/</guid>
       <description></description>
     </item>
     

