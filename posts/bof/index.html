@@ -251,27 +251,6 @@
             
                 
             
-                
-            
-            
-                
-            
-                
-            
-        
-        
-            
-                
-            
-                
-            
-                
-                    <li class="heading">
-                        <a href="/posts/">Read Posts</a>
-                    </li>
-                    
-                
-            
             
                 
             
@@ -284,24 +263,9 @@
             
                 
                     <li class="heading">
-                        <a href="/featured/">Featured Post</a>
+                        <a href="/posts/">Blog Posts</a>
                     </li>
                     
-                        <li class="sub-heading">
-                            
-                        </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/matrix2/">MATRIX-BREAKOUT 2</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/bof/">Buffer Overflow</a>
-                            </li>
-                        
-                    
-                
-            
                 
             
             
@@ -447,13 +411,13 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 <!-- /TOC -->
 <br/>
-<h1 id="overview">Overview</h1>
+<h2 id="overview">Overview</h2>
 <p>In this simulation, I aim to uncover vulnerabilities in the application <strong>Sync Breeze</strong>. After some research, I have found that this specific version of the application is susceptible to buffer overflow attacks. Thus a good sample to test out my buffer overflow sequence.</p>
 <p>The process involves fuzzing the application to determine its vulnerability, then locating the memory location of the EIP. Once the EIP is found, I will inject instructions to redirect it to a custom-crafted shellcode to take over the system.</p>
 <p>This write-up is an actual simulation I did. I welcome constructive feedback and suggestions for improvement. If you notice anything that needs correction, please let me know.</p>
 <br/>
-<h1 id="requirements">Requirements</h1>
-<h2 id="system-requirements">System Requirements</h2>
+<h2 id="requirements">Requirements</h2>
+<h3 id="system-requirements">System Requirements</h3>
 <p>You will need the following:</p>
 <ol>
 <li>Virtualization Application like <a href="https://www.virtualbox.org/">Virtualbox</a> and <a href="https://www.vmware.com/asean/products/workstation-player/workstation-player-evaluation.html">VMware Player</a>.</li>
@@ -469,7 +433,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ol>
 <p>On your local machine download Kali Linux Virtual machine boot it up within your Virtualization of choice. Do the same for Windows 10 and install the tools as listed above.</p>
 <br/>
-<h2 id="installing-vulnerable-application">Installing Vulnerable Application</h2>
+<h3 id="installing-vulnerable-application">Installing Vulnerable Application</h3>
 <p>For testing purposes, download and install Sync Breeze version 10.0.28.</p>
 <img src="/images/sbscrshot.png" alt="Sync Breeze Configuration" width="500"/>
 <ol>
@@ -480,11 +444,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ol>
 <p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="fuzzing">Fuzzing</h1>
+<h2 id="fuzzing">Fuzzing</h2>
 <p>Fuzzing is a technique used to find security vulnerabilities in software applications by sending random and unexpected inputs to the application. In the context of buffer overflow attacks, fuzzing is used to identify inputs that can cause the application to crash or behave abnormally. This can help to identify areas in the application that are susceptible to buffer overflow attacks and can assist in developing a proof-of-concept attack.</p>
 <p>When a fuzzer sends random data to an application, it may uncover areas where the application is not properly checking or sanitizing inputs. If the input data is large enough, it can cause the application to overwrite memory in unexpected ways, leading to a buffer overflow. By continuously sending different inputs to the application, the fuzzer can identify inputs that cause the application to crash, indicating the presence of a potential vulnerability.</p>
 <br/>
-<h2 id="check-if-application-is-vulnerable">Check if Application is Vulnerable</h2>
+<h3 id="check-if-application-is-vulnerable">Check if Application is Vulnerable</h3>
 <ol>
 <li>From Windows 10 make sure Sync Breeze Service is running. Use <code>service.msc</code> to check service status.</li>
 <li>From Kali, open a browser witth Burpsuite as proxy.</li>
@@ -535,9 +499,9 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 When I executed, the application breaks at 800 characters. This means we might be able to to exploit it using Buffer Overflow technique.</p>
 <p><a href="#overview">Back to top</a></p>
 <br/>
-<h2 id="verify-vulnerability">Verify Vulnerability</h2>
+<h3 id="verify-vulnerability">Verify Vulnerability</h3>
 <p>Let us now verify that we really have buffer Oveflow using immunity debugger.</p>
-<h3 id="attach-sync-breeze-service-to-immunuty-debugger">Attach Sync Breeze service to Immunuty Debugger</h3>
+<h4 id="attach-sync-breeze-service-to-immunuty-debugger">Attach Sync Breeze service to Immunuty Debugger</h4>
 <ol>
 <li>From windowss 10 services make sure the service is running.
 <img src="/images/syncbreezeService.png" alt="Sync Breeze Service" width="350"/></li>
@@ -555,8 +519,8 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 </ol>
 <p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="exploitation">Exploitation</h1>
-<h2 id="locating-eip">Locating EIP</h2>
+<h2 id="exploitation">Exploitation</h2>
+<h3 id="locating-eip">Locating EIP</h3>
 <p>Now that we know the exact size needed to crash the target application let&rsquo;s clean the code and and indicate 800 as size without the need to fuzz.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
 </span></span><span style="display:flex;"><span>
@@ -621,7 +585,7 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 </ol>
 <p><a href="#overview">Back to top</a></p>
 <br/>
-<h2 id="controlling-eip">Controlling EIP</h2>
+<h3 id="controlling-eip">Controlling EIP</h3>
 <p>Controlling the value of the Extended Instruction Pointer (<strong>EIP</strong>) register is important in buffer overflow attacks because it determines the flow of execution in the vulnerable application.</p>
 <p>The EIP register holds the memory address of the next instruction that the application will execute. In a buffer overflow attack, the attacker seeks to control the value of the EIP register so that it points to malicious code, rather than the intended code.</p>
 <p>Now that we know the offset value. Let&rsquo;s make sure we can write to the EIP exactly what we wanted. Modify code to match this.</p>
@@ -653,7 +617,7 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 <p>We&rsquo;ve been able to write <code>42424242</code> which is equivalent to<code>BBBB</code> to EIP. We now have control over it and we can now exploit it later.</p>
 <p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="check-for-bad-characters">Check for Bad Characters</h1>
+<h2 id="check-for-bad-characters">Check for Bad Characters</h2>
 <p>Verifying the presence of problematic characters is essential for a successful buffer overflow attack. To ensure seamless generation of our payload, it is crucial to identify which characters will work within the target application, avoiding any potential hindrances in the process.</p>
 <p>To do that let&rsquo;s rewrite the code to match the code below. <strong>badchar</strong> is a variable that lists all possible characters.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
@@ -706,7 +670,7 @@ We now have over written the EIP and therefore we have commited a buffer overflo
 <p>Take note of any bad characters found.</p>
 <p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="finding-jmp-esp">Finding JMP ESP</h1>
+<h2 id="finding-jmp-esp">Finding JMP ESP</h2>
 <p>Finding the address of the <strong>JMP ESP</strong> instruction is important in buffer overflow attacks because it allows the attacker to redirect the flow of execution to their own malicious code.</p>
 <p>The JMP ESP instruction is a machine code instruction that causes the program to jump to the address specified in the ESP (<strong>Extended Stack Pointer</strong>) register. In a buffer overflow attack, the attacker seeks to place their malicious code at the address specified by the JMP ESP instruction and control the value of the ESP register so that it points to this address.</p>
 <p>When the vulnerable application reaches the JMP ESP instruction, it will jump to the attacker&rsquo;s malicious code, executing it with the same level of privileges as the vulnerable application. This allows the attacker to execute arbitrary code and carry out malicious actions.</p>
@@ -748,7 +712,7 @@ We found <code>libspp.dll</code>, then we now need to look for the <code>JMP ESP
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;crashed&#34;</span>)
 </span></span></code></pre></div><p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="writing-shellcode">Writing Shellcode</h1>
+<h2 id="writing-shellcode">Writing Shellcode</h2>
 <p>A shellcode is a small piece of code, typically written in machine language, that is used to perform specific actions on a target system. In the context of buffer overflow attacks, a shellcode is used to gain control over the vulnerable system and execute malicious actions.</p>
 <p>A shellcode is customized for each use in buffer overflow attacks because each target system is unique and has different operating systems, system configurations, and protections. The shellcode must be tailored to the specific target system to bypass any security measures and achieve successful code execution.</p>
 <p>Let&rsquo;s use <code>msfvenom</code> to write a <em><strong>shellcode</strong></em> that we can use to connect on our netcat listener from our kali machine.</p>
@@ -810,7 +774,7 @@ We found <code>libspp.dll</code>, then we now need to look for the <code>JMP ESP
 </span></span></code></pre></div><p>Now the code is ready</p>
 <p><a href="#overview">Back to top</a></p>
 <br>
-<h1 id="gaining-shell">Gaining Shell</h1>
+<h2 id="gaining-shell">Gaining Shell</h2>
 <p>From your kali machine prepare a netcat listener to listen at port <code>4444</code> and execute the script. You should get a shell.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nc -nvlp <span style="color:#ae81ff">4444</span>
 </span></span></code></pre></div><p>Execute the script. You should be able to get the a shell.
@@ -830,9 +794,9 @@ We found <code>libspp.dll</code>, then we now need to look for the <code>JMP ESP
             
             
             <li>
-                February 3, 2023 -
+                March 31, 2023 -
                 
-                    Buffer Overflow
+                    <a href="/posts/matrix2/">MATRIX-BREAKOUT 2</a>
                 
             </li>
             
@@ -856,22 +820,29 @@ We found <code>libspp.dll</code>, then we now need to look for the <code>JMP ESP
       <h4>Contents</h4>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#system-requirements">System Requirements</a></li>
-    <li><a href="#installing-vulnerable-application">Installing Vulnerable Application</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#check-if-application-is-vulnerable">Check if Application is Vulnerable</a></li>
-    <li><a href="#verify-vulnerability">Verify Vulnerability</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#requirements">Requirements</a>
       <ul>
-        <li><a href="#attach-sync-breeze-service-to-immunuty-debugger">Attach Sync Breeze service to Immunuty Debugger</a></li>
+        <li><a href="#system-requirements">System Requirements</a></li>
+        <li><a href="#installing-vulnerable-application">Installing Vulnerable Application</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#locating-eip">Locating EIP</a></li>
-    <li><a href="#controlling-eip">Controlling EIP</a></li>
+    <li><a href="#fuzzing">Fuzzing</a>
+      <ul>
+        <li><a href="#check-if-application-is-vulnerable">Check if Application is Vulnerable</a></li>
+        <li><a href="#verify-vulnerability">Verify Vulnerability</a></li>
+      </ul>
+    </li>
+    <li><a href="#exploitation">Exploitation</a>
+      <ul>
+        <li><a href="#locating-eip">Locating EIP</a></li>
+        <li><a href="#controlling-eip">Controlling EIP</a></li>
+      </ul>
+    </li>
+    <li><a href="#check-for-bad-characters">Check for Bad Characters</a></li>
+    <li><a href="#finding-jmp-esp">Finding JMP ESP</a></li>
+    <li><a href="#writing-shellcode">Writing Shellcode</a></li>
+    <li><a href="#gaining-shell">Gaining Shell</a></li>
   </ul>
 </nav>
     </div>

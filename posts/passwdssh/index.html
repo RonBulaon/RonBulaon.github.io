@@ -124,7 +124,7 @@
     },
     "datePublished": "2022-12-12",
     "description": "",
-    "wordCount":  204 ,
+    "wordCount":  265 ,
     "mainEntityOfPage": "True",
     "dateModified": "2022-12-12",
     "image": {
@@ -251,27 +251,6 @@
             
                 
             
-                
-            
-            
-                
-            
-                
-            
-        
-        
-            
-                
-            
-                
-            
-                
-                    <li class="heading">
-                        <a href="/posts/">Read Posts</a>
-                    </li>
-                    
-                
-            
             
                 
             
@@ -284,24 +263,9 @@
             
                 
                     <li class="heading">
-                        <a href="/featured/">Featured Post</a>
+                        <a href="/posts/">Blog Posts</a>
                     </li>
                     
-                        <li class="sub-heading">
-                            
-                        </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/matrix2/">MATRIX-BREAKOUT 2</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/bof/">Buffer Overflow</a>
-                            </li>
-                        
-                    
-                
-            
                 
             
             
@@ -408,21 +372,25 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>Passwordless SSH logins offer a secure and efficient way to access remote servers. Unlike <strong>traditional authentication methods that rely on passwords</strong>, passwordless SSH utilizes cryptographic keys to verify your identity. T<strong>his eliminates the need to constantly enter your username and password</strong>, making it faster and more convenient.</p>
 <p>It&rsquo;s widely recognized that passwords are vulnerable to hacking and brute force attacks. By using passwordless SSH, you can significantly enhance the security of your remote connections. However, you need to set it up initially by providing your credentials. <strong>After the initial setup, you will be able to access the remote server without being prompted for a password</strong>.</p>
 <p>Follow these three simple steps to set up passwordless SSH access:</p>
-<ol>
-<li>
-<p>Generate SSH keys (<em>skip this step if you already have one</em>). Use the following command to generate <code>id_rsa</code> and <code>id_rsa.pub</code>:</p>
+<h2 id="step-1-generate-ssh-keys">Step 1: Generate SSH keys</h2>
+<ul>
+<li>If you don&rsquo;t already have an SSH key, generate one using the following command in your terminal:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh-keygen -t rsa -b <span style="color:#ae81ff">2048</span>
-</span></span></code></pre></div><p>Note: Make sure not to enter any password when generating the keys.</p>
-</li>
-<li>
-<p>Copy the certificate to the target machine. Enter your current login credentials for the target machine when prompted:</p>
+</span></span></code></pre></div>This will create two files in your <code>.ssh</code> directory: <code>id_rsa</code> (the private key) and <code>id_rsa.pub</code> (the public key).
+Note: You should not enter a password when generating the keys.</li>
+</ul>
+<h2 id="step-2-transfercopy-keys">Step 2: Transfer/Copy Keys</h2>
+<ul>
+<li>Copy the public key to the target machine using the ssh-copy-id command. Replace <code>&lt;username&gt;</code> and <code>&lt;remote_server_ip&gt;</code> with your username and the IP address of the target machine:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh-copy-id &lt;username&gt;@&lt;remote_server_ip&gt;
-</span></span></code></pre></div></li>
-<li>
-<p>Login to the target server through SSH without being prompted for a password:</p>
+</span></span></code></pre></div>You will be prompted to enter your password for the target machine.</li>
+</ul>
+<h2 id="step-3-login-without-password">Step 3: Login without password</h2>
+<ul>
+<li>Test your connection by logging into the target server using SSH:
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh &lt;username&gt;@&lt;remote_server_ip&gt;
-</span></span></code></pre></div></li>
-</ol>
+</span></span></code></pre></div>You should now be able to log in without being prompted for a password.</li>
+</ul>
 <p>And that&rsquo;s it! You now have passwordless SSH access to your target server.</p>
 
   <hr>
@@ -462,7 +430,13 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   <div class="article-toc " >
     <div class="toc-wrapper">
       <h4>Contents</h4>
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#step-1-generate-ssh-keys">Step 1: Generate SSH keys</a></li>
+    <li><a href="#step-2-transfercopy-keys">Step 2: Transfer/Copy Keys</a></li>
+    <li><a href="#step-3-login-without-password">Step 3: Login without password</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 

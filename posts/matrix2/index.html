@@ -251,27 +251,6 @@
             
                 
             
-                
-            
-            
-                
-            
-                
-            
-        
-        
-            
-                
-            
-                
-            
-                
-                    <li class="heading">
-                        <a href="/posts/">Read Posts</a>
-                    </li>
-                    
-                
-            
             
                 
             
@@ -284,24 +263,9 @@
             
                 
                     <li class="heading">
-                        <a href="/featured/">Featured Post</a>
+                        <a href="/posts/">Blog Posts</a>
                     </li>
                     
-                        <li class="sub-heading">
-                            
-                        </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/matrix2/">MATRIX-BREAKOUT 2</a>
-                            </li>
-                        
-                            <li class="bullet">
-                                <a href="/featured/bof/">Buffer Overflow</a>
-                            </li>
-                        
-                    
-                
-            
                 
             
             
@@ -401,11 +365,15 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
     
     
+        <p class="seriesname">
+            Series: <a href="/series/hacking">Hacking</a>
+        </p>
+    
     
     
 </div>
 
-  <h1 id="overview">Overview</h1>
+  <h2 id="overview">Overview</h2>
 <p>Welcome to this blog post where we&rsquo;ll be doing a <strong>Capture the Flag</strong> (CTF) problem-solving challenge. CTF is a popular activity among IT security practitioners, especially with penetration testing professionals and enthusiasts.</p>
 <p>Today, we&rsquo;ll be solving <strong>MATRIX-BREAKOUT: 2 MORPHEUS</strong>, the second installment in the Matrix-Breakout series, with the subtitle &ldquo;Morpheus:1&rdquo;. Inspired by the iconic first Matrix movie, this challenge was contributed on <a href="https://www.vulnhub.com//">VulnHub</a> in late 2022 and rated as Medium/Hard.You can download it <a href="https://www.vulnhub.com/entry/matrix-breakout-2-morpheus,757/">here</a>.</p>
 <p>The objective of this challenge is to gain root access. Although others have attempted it before, <em><strong>I have not consulted any walkthroughs</strong></em> to ensure the authenticity of my approach. Let&rsquo;s get started!</p>
@@ -435,16 +403,16 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 <!-- /TOC -->
 <br/>
-<h1 id="planning-and-reconnaisance">Planning and Reconnaisance</h1>
-<h2 id="setup">Setup</h2>
+<h2 id="planning-and-reconnaisance">Planning and Reconnaisance</h2>
+<h3 id="setup">Setup</h3>
 <ul>
 <li>The victim machine (MATRIX-BREAKOUT: 2 MORPHEUS) has been booted up and running on the same network as my attacker machine (<strong>Kali Linux</strong>). Both are running in Virtualbox.</li>
 </ul>
-<h2 id="nmap">Nmap</h2>
+<h3 id="nmap">Nmap</h3>
 <ul>
 <li>
 <p>We&rsquo;ll leverage the powerful network exploration tool, <code>Nmap</code>, to determine the IP address of the victim machine and scan for any open network ports. Additionally, we can use Nmap to identify any services running on those ports.</p>
-<h3 id="network-sweep">Network Sweep</h3>
+<h4 id="network-sweep">Network Sweep</h4>
 <ul>
 <li>
 <p>To ensure that our network sweep results are accurate, we need to check the IP address of the attacker machine and isolate it from the scan. This helps prevent any potential false positives or erroneous findings.</p>
@@ -460,7 +428,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>It&rsquo;s important to note that the victim&rsquo;s IP address is <code>192.168.56.108</code>, while the attacker&rsquo;s IP address is <code>192.168.56.107</code>. Keep this in mind as we proceed with this activity.</p>
 </li>
 </ul>
-<h3 id="port-scanning">Port Scanning</h3>
+<h4 id="port-scanning">Port Scanning</h4>
 <ul>
 <li>Let&rsquo;s move on to port scanning.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo nmap -sC -sV -O 192.168.56.108
@@ -495,7 +463,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 </li>
 </ul>
-<h3 id="verify-port-scanning-results">Verify Port Scanning Results</h3>
+<h4 id="verify-port-scanning-results">Verify Port Scanning Results</h4>
 <p>Now that we have completed the port scanning, it&rsquo;s time to verify the results. This involves analyzing the information provided by the nmap tool, such as the open ports and detected services, to gain a better understanding of the target machine&rsquo;s network architecture. By carefully examining this information, we can identify potential vulnerabilities and plan our next steps accordingly.</p>
 <ul>
 <li>
@@ -515,16 +483,16 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 </li>
 </ul>
-<h2 id="dirbuster">Dirbuster</h2>
+<h3 id="dirbuster">Dirbuster</h3>
 <ul>
 <li>
 <p>DirBuster is a web app security tool that identifies hidden directories and files through brute force attacks. By leveraging a brute force approach, DirBuster systematically attempts to access hidden directories and files that may not be easily discoverable through traditional browsing methods.</p>
-<h3 id="settings">Settings</h3>
+<h4 id="settings">Settings</h4>
 <ul>
 <li>I used the following settings:
 <img src="/images/m2_drib_settings.png" alt="screenshot" width="100%"/></li>
 </ul>
-<h3 id="results">Results</h3>
+<h4 id="results">Results</h4>
 <ul>
 <li>
 <p>After successfully brute-forcing the web server, it was discovered that there are three additional pages of interest.<br>
@@ -555,11 +523,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 <p><em><strong>Note</strong></em> : Given the current circumstances, it would be wise to only attempt to establish an SSH connection if necessary, as there are fewer vulnerabilities associated with SSH. Additionally, since port 81 is password protected, it may be best to hold off on conducting a scan until a password has been obtained or a vulnerability is doscovered.</p>
 <br/>
-<h1 id="testing-vulnerabilities">Testing Vulnerabilities</h1>
+<h2 id="testing-vulnerabilities">Testing Vulnerabilities</h2>
 <ul>
 <li>
 <p>Now, we&rsquo;ll proceed with testing our earlier hunch regarding the source code. To accomplish this, BurpSuite was launched and set as a proxy to intercept the browser request.</p>
-<h2 id="burpsuite">Burpsuite</h2>
+<h3 id="burpsuite">Burpsuite</h3>
 <ul>
 <li>Using the browser, we entered <code>&lt;?php phpinfo(); ?&gt;</code> and clicked the <code>Post</code> button.
 <img src="/images/m2_burpsuite_browser1.png" alt="screenshot" width="100%"/></li>
@@ -574,11 +542,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 <p><em><strong>Note</strong></em> : Now that we&rsquo;ve confirmed the server&rsquo;s vulnerability, the next step is to exploit it to gain shell access and further establish our foothold.</p>
 <br/>
-<h1 id="gaining-access">Gaining Access</h1>
+<h2 id="gaining-access">Gaining Access</h2>
 <ul>
 <li>
 <p>In a CTF, the objective of gaining shell access is to gain full control over the target machine&rsquo;s operating system. Once shell access has been obtained, the attacker can further explore the system, escalate privileges, and potentially exfiltrate sensitive information.</p>
-<h2 id="web-shell">Web Shell</h2>
+<h3 id="web-shell">Web Shell</h3>
 <ul>
 <li>Now we will be leveraging a PHP webshell, which can be used to remotely execute commands and gain control of the server.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>html<span style="color:#f92672">&gt;</span>
@@ -605,7 +573,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <li>To test the shell, we loaded the following address in the browser: <code>http://192.168.56.108/graffiti.php</code>, and entered the <code>ifconfig</code> command to verify that the shell was functioning properly.
 <img src="/images/m2_webshell1.png" alt="screenshot" width="100%"/></li>
 </ul>
-<h2 id="msfvenom">MSFVenom</h2>
+<h3 id="msfvenom">MSFVenom</h3>
 <ul>
 <li>
 <p>Creating a reverse shell using msfvenom is a powerful technique in penetration testing, allowing the attacker to gain remote access to a target machine through a single command. This custom payload can potentially evade detection by security measures, making it a valuable tool for testing the security of a system.
@@ -621,7 +589,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p><code>shell.elf</code> is the reverse shell program that we&rsquo;ll be using later at the victim machine.</p>
 </li>
 </ul>
-<h2 id="metasploit">Metasploit</h2>
+<h3 id="metasploit">Metasploit</h3>
 <ul>
 <li>
 <p>In order to receive the reverse shell, we will be utilizing Metasploit&rsquo;s multi handler, which is a powerful and reliable tool for penetration testers.</p>
@@ -635,7 +603,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>Multi/Handler is now ready to ready to receive connection.</p>
 </li>
 </ul>
-<h2 id="file-transfer">File Transfer</h2>
+<h3 id="file-transfer">File Transfer</h3>
 <ul>
 <li>
 <p>Creating the <code>shell.elf</code> file through MSFVenom is only useful if we can transfer it onto the victim device. To do this, we will create a web server to host the file and then download it onto the victim machine.</p>
@@ -657,7 +625,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </span></span></code></pre></div>  <img src="/images/m2_webshell_downloaded.png" alt="screenshot" width="100%"/>
 </li>
 </ul>
-<h2 id="the-shell">The shell</h2>
+<h3 id="the-shell">The shell</h3>
 <ul>
 <li>
 <p>In preparation for executing the file, it is necessary to modify its permission settings in Linux using the <code>chmod</code> command. Setting the file permission to <code>777</code> grants read, write, and execute access to all users on the system, ensuring that the file can be executed by any user account including the one that will be running the reverse shell payload. Failure to set the appropriate file permissions may result in the payload not functioning as intended.</p>
@@ -674,7 +642,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <img src="/images/m2_shellobtained.png" alt="screenshot" width="100%"/></p>
 </li>
 </ul>
-<h2 id="tty-escape">TTY Escape</h2>
+<h3 id="tty-escape">TTY Escape</h3>
 <ul>
 <li>
 <p>In some situations, TTY escape is necessary for interacting with the shell, particularly when dealing with interactive commands like password prompts. Without it, commands may not execute properly, or they may produce no response or blank output.</p>
@@ -688,11 +656,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </ul>
 </li>
 </ul>
-<h1 id="privilege-escalation">Privilege Escalation</h1>
+<h2 id="privilege-escalation">Privilege Escalation</h2>
 <ul>
 <li>
 <p>Privilege escalation is the process of exploiting security vulnerabilities or misconfigurations to gain higher-level access than what was initially intended. This provides attackers with greater control over system resources and sensitive data. It&rsquo;s often used by malicious actors to gain administrative or root-level access to a system, enabling them to perform unauthorized actions and continue to compromise the system&rsquo;s security.</p>
-<h2 id="gathering-information">Gathering Information</h2>
+<h3 id="gathering-information">Gathering Information</h3>
 <ul>
 <li>
 <p>Now that we have shell access, our next step is to determine the privileges of the captured account and identify any misconfigurations or vulnerabilities that can be exploited to escalate our privileges.</p>
@@ -702,19 +670,19 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <img src="/images/m2_shell2.png" alt="screenshot" width="100%"/></p>
 </li>
 </ul>
-<h3 id="nginx">Nginx</h3>
+<h4 id="nginx">Nginx</h4>
 <ul>
 <li>Nginx is a web server software that is known for its high performance and ability to handle large amounts of web traffic.</li>
 <li>Earlier, we discovered that the nginx service was running on port <code>81</code>, and upon visiting the nginx folder, we found a <code>.htpasswd</code> file that contained the user credentials for the service.</li>
 <li><code>.htpasswd</code> -&gt; <code>cypher:$apr1$e9o8Y7Om$5zgDW6WOO6Fl8rCC7jpvX0</code>
 <img src="/images/m2_shell3.png" alt="screenshot" width="100%"/></li>
 </ul>
-<h3 id="user-flag">User Flag</h3>
+<h4 id="user-flag">User Flag</h4>
 <ul>
 <li>The user flag, which was located in the root directory, was easily accessible using this account.
 <img src="/images/m2_shell4.png" alt="screenshot" width="100%"/></li>
 </ul>
-<h2 id="linpeas">LinPEAS</h2>
+<h3 id="linpeas">LinPEAS</h3>
 <ul>
 <li>
 <p>Since I didn&rsquo;t find any useful information manually, I will use <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS">LinPEAS</a>, a script that searches for misconfigurations and vulnerabilities in a Linux system to identify any potential avenues for privilege escalation.</p>
@@ -742,7 +710,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <p>Note: Linpeas is a tool that is commonly used for privilege escalation in Linux environments. It is designed to search for common misconfigurations and vulnerabilities that can be exploited to escalate privileges.</p>
 </li>
 </ul>
-<h2 id="dirty-pipe">Dirty Pipe</h2>
+<h3 id="dirty-pipe">Dirty Pipe</h3>
 <ul>
 <li>
 <p><code>CVE-2022-0847</code> is also known as <strong>Dirty Pipe</strong> and fully explained in this <a href="https://www.hackthebox.com/blog/Dirty-Pipe-Explained-CVE-2022-0847#:~:text=DirtyPipe%20is%20a%20local%20privilege,any%20file%20under%20certain%20conditions">article</a>. from <a href="https://www.hackthebox.com/">HTB</a>. And this same blog post led me to the GitHub source code for an <a href="https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit">exploit</a>.</p>
@@ -759,7 +727,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 <li>
 <p>Compile <code>exploit.c</code> it using gcc
 <img src="/images/m2_shell7_compileexploit.png" alt="screenshot" width="100%"/></p>
-<h3 id="root-flag">Root Flag!</h3>
+<h4 id="root-flag">Root Flag!</h4>
 <ul>
 <li>
 <p>When running the exploit, an error may occur, but if you switch to the <code>root</code> user and use the provided password, you can gain <code>root</code> access to the system.
@@ -775,11 +743,11 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </li>
 </ul>
 <br/>
-<h1 id="conclusion">Conclusion</h1>
-<h2 id="summary">Summary</h2>
+<h2 id="conclusion">Conclusion</h2>
+<h3 id="summary">Summary</h3>
 <p>In this blog post, we have walked through the process of conducting a penetration testing exercise on a vulnerable machine using various tools and techniques. We started with scanning the machine with Nmap, and then moved on to using DirBuster to identify hidden directories and files. We also created a webshell and a reverse shell payload using MSFVenom, and used Metasploit&rsquo;s multi handler to receive the reverse shell.</p>
 <p>Once we had a shell on the machine, we performed privilege escalation by checking for misconfigurations and vulnerabilities that could be exploited to elevate our privileges. We used LinPEAS to automate the privilege escalation process and found that the machine was potentially vulnerable to CVE-2022-2588 and CVE-2022-0847. We then used an exploit found on GitHub to gain root access to the machine and retrieve the root flag.</p>
-<h2 id="lessons-learned">Lessons learned</h2>
+<h3 id="lessons-learned">Lessons learned</h3>
 <ul>
 <li>Penetration testing is a critical component of any organization&rsquo;s security strategy, as it helps identify vulnerabilities and weaknesses in their systems and processes.</li>
 <li>Web applications are a common entry point for attackers, and it is important to regularly test and secure them against potential exploits.</li>
@@ -793,12 +761,31 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
   <hr>
 <div class="footer">
     
-	    
+    
+    
+    <p>
+    This is a post in the <b><a href="/series/hacking">Hacking</a></b> series.
+        <br>Other posts in this series:
+        <ul class="series">
             
-        
-	    
             
-        
+            
+            <li>
+                March 31, 2023 -
+                
+                    MATRIX-BREAKOUT 2
+                
+            </li>
+            
+            <li>
+                February 3, 2023 -
+                
+                    <a href="/posts/bof/">Buffer Overflow</a>
+                
+            </li>
+            
+        </ul>
+    </p>
     
 </div>
 
@@ -810,53 +797,42 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
       <h4>Contents</h4>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#setup">Setup</a></li>
-    <li><a href="#nmap">Nmap</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#planning-and-reconnaisance">Planning and Reconnaisance</a>
       <ul>
-        <li><a href="#network-sweep">Network Sweep</a></li>
-        <li><a href="#port-scanning">Port Scanning</a></li>
-        <li><a href="#verify-port-scanning-results">Verify Port Scanning Results</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#nmap">Nmap</a></li>
+        <li><a href="#dirbuster">Dirbuster</a></li>
       </ul>
     </li>
-    <li><a href="#dirbuster">Dirbuster</a>
+    <li><a href="#testing-vulnerabilities">Testing Vulnerabilities</a>
       <ul>
-        <li><a href="#settings">Settings</a></li>
-        <li><a href="#results">Results</a></li>
+        <li><a href="#burpsuite">Burpsuite</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#burpsuite">Burpsuite</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#web-shell">Web Shell</a></li>
-    <li><a href="#msfvenom">MSFVenom</a></li>
-    <li><a href="#metasploit">Metasploit</a></li>
-    <li><a href="#file-transfer">File Transfer</a></li>
-    <li><a href="#the-shell">The shell</a></li>
-    <li><a href="#tty-escape">TTY Escape</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#gathering-information">Gathering Information</a>
+    <li><a href="#gaining-access">Gaining Access</a>
       <ul>
-        <li><a href="#nginx">Nginx</a></li>
-        <li><a href="#user-flag">User Flag</a></li>
+        <li><a href="#web-shell">Web Shell</a></li>
+        <li><a href="#msfvenom">MSFVenom</a></li>
+        <li><a href="#metasploit">Metasploit</a></li>
+        <li><a href="#file-transfer">File Transfer</a></li>
+        <li><a href="#the-shell">The shell</a></li>
+        <li><a href="#tty-escape">TTY Escape</a></li>
       </ul>
     </li>
-    <li><a href="#linpeas">LinPEAS</a></li>
-    <li><a href="#dirty-pipe">Dirty Pipe</a>
+    <li><a href="#privilege-escalation">Privilege Escalation</a>
       <ul>
-        <li><a href="#root-flag">Root Flag!</a></li>
+        <li><a href="#gathering-information">Gathering Information</a></li>
+        <li><a href="#linpeas">LinPEAS</a></li>
+        <li><a href="#dirty-pipe">Dirty Pipe</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#summary">Summary</a></li>
-    <li><a href="#lessons-learned">Lessons learned</a></li>
+    <li><a href="#conclusion">Conclusion</a>
+      <ul>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#lessons-learned">Lessons learned</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
