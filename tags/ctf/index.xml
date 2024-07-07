@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CTF on </title>
-    <link>/tags/ctf/</link>
+    <link>https://ronbulaon.github.io/tags/ctf/</link>
     <description>Recent content in CTF on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate><atom:link href="/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate>
+    <atom:link href="https://ronbulaon.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MATRIX-BREAKOUT 2</title>
-      <link>/posts/matrix2/</link>
+      <link>https://ronbulaon.github.io/posts/matrix2/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
-      
-      <guid>/posts/matrix2/</guid>
-      <description>Overview Welcome to this blog post where we&amp;rsquo;ll be doing a Capture the Flag (CTF) problem-solving challenge. CTF is a popular activity among IT security practitioners, especially with penetration testing professionals and enthusiasts.
-Today, we&amp;rsquo;ll be solving MATRIX-BREAKOUT: 2 MORPHEUS, the second installment in the Matrix-Breakout series, with the subtitle &amp;ldquo;Morpheus:1&amp;rdquo;. Inspired by the iconic first Matrix movie, this challenge was contributed on VulnHub in late 2022 and rated as Medium/Hard.</description>
+      <guid>https://ronbulaon.github.io/posts/matrix2/</guid>
+      <description>Overview Welcome to this blog post where we&amp;rsquo;ll be doing a Capture the Flag (CTF) problem-solving challenge. CTF is a popular activity among IT security practitioners, especially with penetration testing professionals and enthusiasts.&#xA;Today, we&amp;rsquo;ll be solving MATRIX-BREAKOUT: 2 MORPHEUS, the second installment in the Matrix-Breakout series, with the subtitle &amp;ldquo;Morpheus:1&amp;rdquo;. Inspired by the iconic first Matrix movie, this challenge was contributed on VulnHub in late 2022 and rated as Medium/Hard.</description>
     </item>
-    
   </channel>
 </rss>

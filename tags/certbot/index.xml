@@ -2,20 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>certbot on </title>
-    <link>/tags/certbot/</link>
+    <link>https://ronbulaon.github.io/tags/certbot/</link>
     <description>Recent content in certbot on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Dec 2022 12:33:09 -0600</lastBuildDate><atom:link href="/tags/certbot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Dec 2022 12:33:09 -0600</lastBuildDate>
+    <atom:link href="https://ronbulaon.github.io/tags/certbot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Application Server</title>
-      <link>/posts/pythonnginx/</link>
+      <link>https://ronbulaon.github.io/posts/pythonnginx/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
-      
-      <guid>/posts/pythonnginx/</guid>
-      <description>In this post, I will be providing an overview on how I set up an application server to host my Python data visualization using popular frameworks like Bokeh or Dash. The server is built on Ubuntu and utilizes Nginx as a reverse proxy and Certbot for securing the connection with HTTPS.
-Please note that this guide is not exhaustive or highly detailed, as it is intended for internal access and use only.</description>
+      <guid>https://ronbulaon.github.io/posts/pythonnginx/</guid>
+      <description>In this post, I will be providing an overview on how I set up an application server to host my Python data visualization using popular frameworks like Bokeh or Dash. The server is built on Ubuntu and utilizes Nginx as a reverse proxy and Certbot for securing the connection with HTTPS.&#xA;Please note that this guide is not exhaustive or highly detailed, as it is intended for internal access and use only.</description>
     </item>
-    
   </channel>
 </rss>

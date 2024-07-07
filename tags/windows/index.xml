@@ -2,42 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on </title>
-    <link>/tags/windows/</link>
+    <link>https://ronbulaon.github.io/tags/windows/</link>
     <description>Recent content in windows on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2023 00:28:29 -0600</lastBuildDate><atom:link href="/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Feb 2023 00:28:29 -0600</lastBuildDate>
+    <atom:link href="https://ronbulaon.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Buffer Overflow</title>
-      <link>/posts/bof/</link>
+      <link>https://ronbulaon.github.io/posts/bof/</link>
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
-      
-      <guid>/posts/bof/</guid>
-      <description>Buffer overflow attacks have been a topic of discussion in the cybersecurity world for a long time, but I believe there&amp;rsquo;s always room for another perspective.
-In this writeup, I will take a unique approach and walk you through the process of executing a buffer overflow attack using VSCode as my code editor and BurpSuite to generate the initial request in Python.
-My goal is to provide a clear and concise explanation of this complex topic, so that even those with limited experience can understand the mechanics behind buffer overflow attacks.</description>
+      <guid>https://ronbulaon.github.io/posts/bof/</guid>
+      <description>Buffer overflow attacks have been a topic of discussion in the cybersecurity world for a long time, but I believe there&amp;rsquo;s always room for another perspective.&#xA;In this writeup, I will take a unique approach and walk you through the process of executing a buffer overflow attack using VSCode as my code editor and BurpSuite to generate the initial request in Python.&#xA;My goal is to provide a clear and concise explanation of this complex topic, so that even those with limited experience can understand the mechanics behind buffer overflow attacks.</description>
     </item>
-    
     <item>
       <title>Join Windows 10 to Active Directory using PowerShell</title>
-      <link>/posts/powershell02/</link>
+      <link>https://ronbulaon.github.io/posts/powershell02/</link>
       <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
-      
-      <guid>/posts/powershell02/</guid>
-      <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *
-In this guide, I will walk you through the steps to configure a newly installed Windows 10 machine to join an existing Active Directory domain using PowerShell. The commands for the configuration process will be included in a script and each command will be thoroughly explained to help you understand the process.
-By the end of this tutorial, you will have a clear understanding of how to join a Windows 10 machine to an Active Directory domain using PowerShell.</description>
+      <guid>https://ronbulaon.github.io/posts/powershell02/</guid>
+      <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *&#xA;In this guide, I will walk you through the steps to configure a newly installed Windows 10 machine to join an existing Active Directory domain using PowerShell. The commands for the configuration process will be included in a script and each command will be thoroughly explained to help you understand the process.&#xA;By the end of this tutorial, you will have a clear understanding of how to join a Windows 10 machine to an Active Directory domain using PowerShell.</description>
     </item>
-    
     <item>
       <title>Install and Configure Active Directory using PowerShell</title>
-      <link>/posts/powershell01/</link>
+      <link>https://ronbulaon.github.io/posts/powershell01/</link>
       <pubDate>Mon, 02 Jan 2023 14:06:15 -0600</pubDate>
-      
-      <guid>/posts/powershell01/</guid>
-      <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *
-In this installment of the series, we will delve into the process of installing and configuring a Windows Active Directory using PowerShell. The goal is to simplify the installation procedure by compiling a set of PowerShell scripts, enabling the creation of a test environment with ease and convenience whenever an application needs to be tested.</description>
+      <guid>https://ronbulaon.github.io/posts/powershell01/</guid>
+      <description>*Note : This is part of a series for how I build Windows Enterprise Test environment. *&#xA;In this installment of the series, we will delve into the process of installing and configuring a Windows Active Directory using PowerShell. The goal is to simplify the installation procedure by compiling a set of PowerShell scripts, enabling the creation of a test environment with ease and convenience whenever an application needs to be tested.</description>
     </item>
-    
   </channel>
 </rss>

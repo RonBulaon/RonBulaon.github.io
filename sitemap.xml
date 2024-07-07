@@ -2,118 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://ronbulaon.github.io/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/burpsuite/</loc>
+    <loc>https://ronbulaon.github.io/tags/burpsuite/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/ctf/</loc>
+    <loc>https://ronbulaon.github.io/tags/ctf/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/hacking/</loc>
+    <loc>https://ronbulaon.github.io/tags/hacking/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/series/hacking/</loc>
+    <loc>https://ronbulaon.github.io/tags/kali/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/kali/</loc>
+    <loc>https://ronbulaon.github.io/posts/matrix2/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/posts/matrix2/</loc>
+    <loc>https://ronbulaon.github.io/tags/pentesting/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/pentesting/</loc>
+    <loc>https://ronbulaon.github.io/posts/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://ronbulaon.github.io/tags/security/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/security/</loc>
+    <loc>https://ronbulaon.github.io/tags/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/series/</loc>
+    <loc>https://ronbulaon.github.io/tags/vulnhub/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-03-31T10:21:07-05:00</lastmod>
-  </url><url>
-    <loc>/tags/vulnhub/</loc>
-    <lastmod>2023-03-31T10:21:07-05:00</lastmod>
-  </url><url>
-    <loc>/posts/bof/</loc>
+    <loc>https://ronbulaon.github.io/posts/bof/</loc>
     <lastmod>2023-02-03T00:28:29-06:00</lastmod>
   </url><url>
-    <loc>/tags/linux/</loc>
+    <loc>https://ronbulaon.github.io/tags/linux/</loc>
     <lastmod>2023-02-03T00:28:29-06:00</lastmod>
   </url><url>
-    <loc>/tags/vscode/</loc>
+    <loc>https://ronbulaon.github.io/tags/vscode/</loc>
     <lastmod>2023-02-03T00:28:29-06:00</lastmod>
   </url><url>
-    <loc>/tags/windows/</loc>
+    <loc>https://ronbulaon.github.io/tags/windows/</loc>
     <lastmod>2023-02-03T00:28:29-06:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://ronbulaon.github.io/about/</loc>
     <lastmod>2023-02-02T00:48:40-06:00</lastmod>
   </url><url>
-    <loc>/about/about/</loc>
+    <loc>https://ronbulaon.github.io/about/about/</loc>
     <lastmod>2023-02-02T00:48:40-06:00</lastmod>
   </url><url>
-    <loc>/tags/active-directory/</loc>
+    <loc>https://ronbulaon.github.io/tags/active-directory/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/tags/automation/</loc>
+    <loc>https://ronbulaon.github.io/tags/automation/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/series/building-windows-environment/</loc>
+    <loc>https://ronbulaon.github.io/posts/powershell02/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/posts/powershell02/</loc>
+    <loc>https://ronbulaon.github.io/tags/powershell/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/tags/powershell/</loc>
+    <loc>https://ronbulaon.github.io/tags/scripting/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/tags/scripting/</loc>
+    <loc>https://ronbulaon.github.io/tags/server/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
-    <loc>/tags/server/</loc>
-    <lastmod>2023-01-02T14:50:33-06:00</lastmod>
-  </url><url>
-    <loc>/posts/powershell01/</loc>
+    <loc>https://ronbulaon.github.io/posts/powershell01/</loc>
     <lastmod>2023-01-02T14:06:15-06:00</lastmod>
   </url><url>
-    <loc>/series/linux-servers/</loc>
+    <loc>https://ronbulaon.github.io/posts/passwdssh/</loc>
     <lastmod>2022-12-12T10:36:00-06:00</lastmod>
   </url><url>
-    <loc>/posts/passwdssh/</loc>
+    <loc>https://ronbulaon.github.io/tags/passwords/</loc>
     <lastmod>2022-12-12T10:36:00-06:00</lastmod>
   </url><url>
-    <loc>/tags/passwords/</loc>
+    <loc>https://ronbulaon.github.io/tags/ssh/</loc>
     <lastmod>2022-12-12T10:36:00-06:00</lastmod>
   </url><url>
-    <loc>/tags/ssh/</loc>
+    <loc>https://ronbulaon.github.io/tags/system-administration/</loc>
     <lastmod>2022-12-12T10:36:00-06:00</lastmod>
   </url><url>
-    <loc>/tags/system-administration/</loc>
-    <lastmod>2022-12-12T10:36:00-06:00</lastmod>
-  </url><url>
-    <loc>/tags/apache2/</loc>
+    <loc>https://ronbulaon.github.io/tags/apache2/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
   </url><url>
-    <loc>/tags/certbot/</loc>
+    <loc>https://ronbulaon.github.io/tags/certbot/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
   </url><url>
-    <loc>/posts/pythonnginx/</loc>
+    <loc>https://ronbulaon.github.io/posts/pythonnginx/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
   </url><url>
-    <loc>/tags/nginx/</loc>
+    <loc>https://ronbulaon.github.io/tags/nginx/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
   </url><url>
-    <loc>/tags/python/</loc>
+    <loc>https://ronbulaon.github.io/tags/python/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
   </url><url>
-    <loc>/tags/ubuntu/</loc>
+    <loc>https://ronbulaon.github.io/tags/ubuntu/</loc>
     <lastmod>2022-12-02T12:33:09-06:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/series/</loc>
   </url>
 </urlset>

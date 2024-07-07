@@ -2,37 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on </title>
-    <link>/series/</link>
+    <link>https://ronbulaon.github.io/series/</link>
     <description>Recent content in Series on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hacking</title>
-      <link>/series/hacking/</link>
-      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
-      
-      <guid>/series/hacking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Building Windows Environment</title>
-      <link>/series/building-windows-environment/</link>
-      <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
-      
-      <guid>/series/building-windows-environment/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux Servers</title>
-      <link>/series/linux-servers/</link>
-      <pubDate>Mon, 12 Dec 2022 10:36:00 -0600</pubDate>
-      
-      <guid>/series/linux-servers/</guid>
-      <description></description>
-    </item>
-    
+    <atom:link href="https://ronbulaon.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
