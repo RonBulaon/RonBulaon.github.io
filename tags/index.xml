@@ -6,8 +6,36 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2024 21:28:18 +0000</lastBuildDate>
     <atom:link href="https://ronbulaon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>networking</title>
+      <link>https://ronbulaon.github.io/tags/networking/</link>
+      <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
+      <guid>https://ronbulaon.github.io/tags/networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>open vpn</title>
+      <link>https://ronbulaon.github.io/tags/open-vpn/</link>
+      <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
+      <guid>https://ronbulaon.github.io/tags/open-vpn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pfsense</title>
+      <link>https://ronbulaon.github.io/tags/pfsense/</link>
+      <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
+      <guid>https://ronbulaon.github.io/tags/pfsense/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>system administration</title>
+      <link>https://ronbulaon.github.io/tags/system-administration/</link>
+      <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
+      <guid>https://ronbulaon.github.io/tags/system-administration/</guid>
+      <description></description>
+    </item>
     <item>
       <title>burpsuite</title>
       <link>https://ronbulaon.github.io/tags/burpsuite/</link>
@@ -125,13 +153,6 @@
       <link>https://ronbulaon.github.io/tags/ssh/</link>
       <pubDate>Mon, 12 Dec 2022 10:36:00 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>system administration</title>
-      <link>https://ronbulaon.github.io/tags/system-administration/</link>
-      <pubDate>Mon, 12 Dec 2022 10:36:00 -0600</pubDate>
-      <guid>https://ronbulaon.github.io/tags/system-administration/</guid>
       <description></description>
     </item>
     <item>

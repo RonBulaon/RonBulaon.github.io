@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pfsense on </title>
+    <link>https://ronbulaon.github.io/tags/pfsense/</link>
+    <description>Recent content in pfsense on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Apr 2024 21:28:18 +0000</lastBuildDate>
+    <atom:link href="https://ronbulaon.github.io/tags/pfsense/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PfSense - OpenVPN</title>
+      <link>https://ronbulaon.github.io/posts/pfsenseovpn1/</link>
+      <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
+      <guid>https://ronbulaon.github.io/posts/pfsenseovpn1/</guid>
+      <description>Overview and Objective This document outlines the process for setting up a site-to-site OpenVPN connection using PfSense. The goal is to establish a secure, encrypted tunnel between two separate networks over the internet, ensuring secure communication and data transfer between the connected networks. The objective of this guide is to provide step-by-step instructions for configuring this site-to-site OpenVPN connection using SSL/TLS on PfSense. This setup aims to create a secure link between two remote networks, allowing for seamless and secure communication as if they were on the same local network.</description>
+    </item>
+  </channel>
+</rss>
