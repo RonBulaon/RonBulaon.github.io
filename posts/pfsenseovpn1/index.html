@@ -210,13 +210,13 @@
             
                 
                 
-                    <li class="heading">
-                        <a href="/about/">About Me</a>
-                    </li>
-                    
-                
             
                 
+                
+                    <li class="heading">
+                        <a href="/posts/">My Posts</a>
+                    </li>
+                    
                 
             
             
@@ -285,13 +285,13 @@
             
                 
                 
-            
-                
-                
                     <li class="heading">
-                        <a href="/posts/">My Posts</a>
+                        <a href="/about/">About Me</a>
                     </li>
                     
+                
+            
+                
                 
             
             
@@ -449,7 +449,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
           
         
 
-        <span>6 mins read</span>
+        <span>7 mins read</span>
       </span>
     </div>
 
@@ -483,7 +483,19 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
 </div>
 
   <h2 id="overview-and-objective">Overview and Objective</h2>
-<p>This document outlines the process for setting up a site-to-site OpenVPN connection using PfSense. The goal is to establish a secure, encrypted tunnel between two separate networks over the internet, ensuring secure communication and data transfer between the connected networks. The objective of this guide is to provide step-by-step instructions for configuring this site-to-site OpenVPN connection using SSL/TLS on PfSense. This setup aims to create a secure link between two remote networks, allowing for seamless and secure communication as if they were on the same local network.</p>
+<p>This document outlines the process for setting up a site-to-site OpenVPN connection using pfSense. The goal is to establish a secure, encrypted tunnel between two separate networks over the internet, ensuring secure communication and data transfer between the connected networks.</p>
+<p>The objective of this guide is to provide step-by-step instructions for configuring this site-to-site OpenVPN connection using SSL/TLS on pfSense. This setup aims to create a secure link between two remote networks, allowing for seamless and secure communication as if they were on the same local network.</p>
+<h3 id="network-diagram">Network Diagram</h3>
+<ul>
+<li><strong>Site A</strong>: This site has a local area network (LAN) connected to a pfSense router. The pfSense router at Site A is configured as the OpenVPN server.</li>
+<li><strong>Site B</strong>: This site also has a local area network (LAN) connected to a pfSense router. The pfSense router at Site B is configured as the OpenVPN client.</li>
+</ul>
+<p>The end result is that Site A and Site B will be securely connected as if they are on the same local network, allowing seamless communication between the two sites.</p>
+<p><br/><img src="/images/pfsense/pfsensenetdiag.png" alt="screenshot" width="800"/>
+<br/><br/></p>
+<h3 id="why-pfsense">Why PFsense</h3>
+<p>pfSense offers a user-friendly interface with an integrated OpenVPN, simplifying the setup process significantly. Its comprehensive documentation and strong community support further streamline implementation, making it a highly accessible and cost-effective solution for secure site-to-site VPN connections.
+<br/></p>
 <h2>Table of Contents</h2>
 <!-- TOC -->
 <ul>
@@ -771,7 +783,12 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
       <h4 id="contents"></h4>
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview-and-objective">Overview and Objective</a></li>
+    <li><a href="#overview-and-objective">Overview and Objective</a>
+      <ul>
+        <li><a href="#network-diagram">Network Diagram</a></li>
+        <li><a href="#why-pfsense">Why PFsense</a></li>
+      </ul>
+    </li>
     <li><a href="#certificates">Certificates</a>
       <ul>
         <li><a href="#create-a-certificate-authority-ca">Create a Certificate Authority (CA)</a></li>
