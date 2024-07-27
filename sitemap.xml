@@ -3,12 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ronbulaon.github.io/</loc>
-    <lastmod>2024-04-22T21:28:18+00:00</lastmod>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/build/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/devops/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/git/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/gitlab/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/posts/gitlabce/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/posts/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/</loc>
+    <lastmod>2024-06-07T21:02:07-05:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/networking/</loc>
     <lastmod>2024-04-22T21:28:18+00:00</lastmod>
   </url><url>
-    <loc>https://ronbulaon.github.io/tags/open-vpn/</loc>
+    <loc>https://ronbulaon.github.io/tags/openvpn/</loc>
     <lastmod>2024-04-22T21:28:18+00:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/pfsense/</loc>
@@ -17,19 +38,25 @@
     <loc>https://ronbulaon.github.io/posts/pfsenseovpn1/</loc>
     <lastmod>2024-04-22T21:28:18+00:00</lastmod>
   </url><url>
-    <loc>https://ronbulaon.github.io/posts/</loc>
-    <lastmod>2024-04-22T21:28:18+00:00</lastmod>
-  </url><url>
     <loc>https://ronbulaon.github.io/tags/system-administration/</loc>
     <lastmod>2024-04-22T21:28:18+00:00</lastmod>
   </url><url>
-    <loc>https://ronbulaon.github.io/tags/</loc>
-    <lastmod>2024-04-22T21:28:18+00:00</lastmod>
+    <loc>https://ronbulaon.github.io/tags/automation/</loc>
+    <lastmod>2024-02-26T20:45:01-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/posts/jenkins/</loc>
+    <lastmod>2024-02-26T20:45:01-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/tags/jenkins/</loc>
+    <lastmod>2024-02-26T20:45:01-05:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/burpsuite/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/ctf/</loc>
+    <lastmod>2023-03-31T10:21:07-05:00</lastmod>
+  </url><url>
+    <loc>https://ronbulaon.github.io/posts/matrix2/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/hacking/</loc>
@@ -38,10 +65,10 @@
     <loc>https://ronbulaon.github.io/tags/kali/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>https://ronbulaon.github.io/posts/matrix2/</loc>
+    <loc>https://ronbulaon.github.io/tags/pentesting/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
-    <loc>https://ronbulaon.github.io/tags/pentesting/</loc>
+    <loc>https://ronbulaon.github.io/tags/secure/</loc>
     <lastmod>2023-03-31T10:21:07-05:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/security/</loc>
@@ -69,9 +96,6 @@
     <lastmod>2023-02-02T00:48:40-06:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/tags/active-directory/</loc>
-    <lastmod>2023-01-02T14:50:33-06:00</lastmod>
-  </url><url>
-    <loc>https://ronbulaon.github.io/tags/automation/</loc>
     <lastmod>2023-01-02T14:50:33-06:00</lastmod>
   </url><url>
     <loc>https://ronbulaon.github.io/posts/powershell02/</loc>

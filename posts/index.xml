@@ -6,8 +6,15 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Apr 2024 21:28:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2024 21:02:07 -0500</lastBuildDate>
     <atom:link href="https://ronbulaon.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install GitLab CE</title>
+      <link>https://ronbulaon.github.io/posts/gitlabce/</link>
+      <pubDate>Fri, 07 Jun 2024 21:02:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/posts/gitlabce/</guid>
+      <description>GitLab is a comprehensive DevOps platform that provides source code management, CI/CD pipelines, and collaborative tools for software development. GitLab CE is its the open-source and free version, and ideal for individuals and small teams due to its cost-effectiveness, transparency, and robust feature set.&#xA;This post is a step-by-step install guide for GitLab CE on Ubuntu 24.04.&#xA;1. Update System Packages First, update your package lists and upgrade any existing packages to their latest versions.</description>
+    </item>
     <item>
       <title>PfSense - OpenVPN</title>
       <link>https://ronbulaon.github.io/posts/pfsenseovpn1/</link>
@@ -16,14 +23,21 @@
       <description>Overview and Objective This document outlines the process for setting up a site-to-site OpenVPN connection using pfSense. The goal is to establish a secure, encrypted tunnel between two separate networks over the internet, ensuring secure communication and data transfer between the connected networks.&#xA;The objective of this guide is to provide step-by-step instructions for configuring this site-to-site OpenVPN connection using SSL/TLS on pfSense. This setup aims to create a secure link between two remote networks, allowing for seamless and secure communication as if they were on the same local network.</description>
     </item>
     <item>
-      <title>MATRIX-BREAKOUT 2</title>
+      <title>Install Jenkins</title>
+      <link>https://ronbulaon.github.io/posts/jenkins/</link>
+      <pubDate>Mon, 26 Feb 2024 20:45:01 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/posts/jenkins/</guid>
+      <description>Jenkins is an open-source automation server that helps automate the building, testing, and deployment of software projects. Jenkins is widely used for its flexibility, extensive plugin ecosystem, and strong community support, making it an excellent choice for continuous integration and continuous delivery (CI/CD) needs.&#xA;This post is a step-by-step install guide for Jenkins on Ubuntu 24.04.&#xA;1. Install Java Since Jenkins is a Java-based application, we’ll need to install OpenJDK 17 for the latest and stable Jenkins setup.</description>
+    </item>
+    <item>
+      <title>CTF : MATRIX-BREAKOUT 2</title>
       <link>https://ronbulaon.github.io/posts/matrix2/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       <guid>https://ronbulaon.github.io/posts/matrix2/</guid>
       <description>Overview Welcome to this blog post where we&amp;rsquo;ll be doing a Capture the Flag (CTF) problem-solving challenge. CTF is a popular activity among IT security practitioners, especially with penetration testing professionals and enthusiasts.&#xA;Today, we&amp;rsquo;ll be solving MATRIX-BREAKOUT: 2 MORPHEUS, the second installment in the Matrix-Breakout series, with the subtitle &amp;ldquo;Morpheus:1&amp;rdquo;. Inspired by the iconic first Matrix movie, this challenge was contributed on VulnHub in late 2022 and rated as Medium/Hard.</description>
     </item>
     <item>
-      <title>Buffer Overflow</title>
+      <title>Exploit Development : Buffer Overflow</title>
       <link>https://ronbulaon.github.io/posts/bof/</link>
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
       <guid>https://ronbulaon.github.io/posts/bof/</guid>

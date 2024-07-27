@@ -6,24 +6,52 @@
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Apr 2024 21:28:18 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2024 21:02:07 -0500</lastBuildDate>
     <atom:link href="https://ronbulaon.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>networking</title>
+      <title>build</title>
+      <link>https://ronbulaon.github.io/tags/build/</link>
+      <pubDate>Fri, 07 Jun 2024 21:02:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/build/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>devops</title>
+      <link>https://ronbulaon.github.io/tags/devops/</link>
+      <pubDate>Fri, 07 Jun 2024 21:02:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>git</title>
+      <link>https://ronbulaon.github.io/tags/git/</link>
+      <pubDate>Fri, 07 Jun 2024 21:02:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitlab</title>
+      <link>https://ronbulaon.github.io/tags/gitlab/</link>
+      <pubDate>Fri, 07 Jun 2024 21:02:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Networking</title>
       <link>https://ronbulaon.github.io/tags/networking/</link>
       <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
       <guid>https://ronbulaon.github.io/tags/networking/</guid>
       <description></description>
     </item>
     <item>
-      <title>open vpn</title>
-      <link>https://ronbulaon.github.io/tags/open-vpn/</link>
+      <title>OpenVPN</title>
+      <link>https://ronbulaon.github.io/tags/openvpn/</link>
       <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
-      <guid>https://ronbulaon.github.io/tags/open-vpn/</guid>
+      <guid>https://ronbulaon.github.io/tags/openvpn/</guid>
       <description></description>
     </item>
     <item>
-      <title>pfsense</title>
+      <title>pfSense</title>
       <link>https://ronbulaon.github.io/tags/pfsense/</link>
       <pubDate>Mon, 22 Apr 2024 21:28:18 +0000</pubDate>
       <guid>https://ronbulaon.github.io/tags/pfsense/</guid>
@@ -37,7 +65,21 @@
       <description></description>
     </item>
     <item>
-      <title>burpsuite</title>
+      <title>Automation</title>
+      <link>https://ronbulaon.github.io/tags/automation/</link>
+      <pubDate>Mon, 26 Feb 2024 20:45:01 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jenkins</title>
+      <link>https://ronbulaon.github.io/tags/jenkins/</link>
+      <pubDate>Mon, 26 Feb 2024 20:45:01 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>BurpSuite</title>
       <link>https://ronbulaon.github.io/tags/burpsuite/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       <guid>https://ronbulaon.github.io/tags/burpsuite/</guid>
@@ -51,7 +93,7 @@
       <description></description>
     </item>
     <item>
-      <title>hacking</title>
+      <title>Hacking</title>
       <link>https://ronbulaon.github.io/tags/hacking/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       <guid>https://ronbulaon.github.io/tags/hacking/</guid>
@@ -65,14 +107,21 @@
       <description></description>
     </item>
     <item>
-      <title>pentesting</title>
+      <title>Pentesting</title>
       <link>https://ronbulaon.github.io/tags/pentesting/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       <guid>https://ronbulaon.github.io/tags/pentesting/</guid>
       <description></description>
     </item>
     <item>
-      <title>security</title>
+      <title>Secure</title>
+      <link>https://ronbulaon.github.io/tags/secure/</link>
+      <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/tags/secure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
       <link>https://ronbulaon.github.io/tags/security/</link>
       <pubDate>Fri, 31 Mar 2023 10:21:07 -0500</pubDate>
       <guid>https://ronbulaon.github.io/tags/security/</guid>
@@ -86,56 +135,49 @@
       <description></description>
     </item>
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://ronbulaon.github.io/tags/linux/</link>
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
-      <title>vscode</title>
+      <title>VSCode</title>
       <link>https://ronbulaon.github.io/tags/vscode/</link>
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     <item>
-      <title>windows</title>
+      <title>Windows</title>
       <link>https://ronbulaon.github.io/tags/windows/</link>
       <pubDate>Fri, 03 Feb 2023 00:28:29 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/windows/</guid>
       <description></description>
     </item>
     <item>
-      <title>active directory</title>
+      <title>Active Directory</title>
       <link>https://ronbulaon.github.io/tags/active-directory/</link>
       <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/active-directory/</guid>
       <description></description>
     </item>
     <item>
-      <title>automation</title>
-      <link>https://ronbulaon.github.io/tags/automation/</link>
-      <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
-      <guid>https://ronbulaon.github.io/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>powershell</title>
+      <title>PowerShell</title>
       <link>https://ronbulaon.github.io/tags/powershell/</link>
       <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
-      <title>scripting</title>
+      <title>Scripting</title>
       <link>https://ronbulaon.github.io/tags/scripting/</link>
       <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/scripting/</guid>
       <description></description>
     </item>
     <item>
-      <title>server</title>
+      <title>Server</title>
       <link>https://ronbulaon.github.io/tags/server/</link>
       <pubDate>Mon, 02 Jan 2023 14:50:33 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/server/</guid>
@@ -156,35 +198,35 @@
       <description></description>
     </item>
     <item>
-      <title>apache2</title>
+      <title>Apache2</title>
       <link>https://ronbulaon.github.io/tags/apache2/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/apache2/</guid>
       <description></description>
     </item>
     <item>
-      <title>certbot</title>
+      <title>Certbot</title>
       <link>https://ronbulaon.github.io/tags/certbot/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/certbot/</guid>
       <description></description>
     </item>
     <item>
-      <title>nginx</title>
+      <title>Nginx</title>
       <link>https://ronbulaon.github.io/tags/nginx/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/nginx/</guid>
       <description></description>
     </item>
     <item>
-      <title>python</title>
+      <title>Python</title>
       <link>https://ronbulaon.github.io/tags/python/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
-      <title>ubuntu</title>
+      <title>Ubuntu</title>
       <link>https://ronbulaon.github.io/tags/ubuntu/</link>
       <pubDate>Fri, 02 Dec 2022 12:33:09 -0600</pubDate>
       <guid>https://ronbulaon.github.io/tags/ubuntu/</guid>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nginx on </title>
+    <title>Nginx on </title>
     <link>https://ronbulaon.github.io/tags/nginx/</link>
-    <description>Recent content in nginx on </description>
+    <description>Recent content in Nginx on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Dec 2022 12:33:09 -0600</lastBuildDate>

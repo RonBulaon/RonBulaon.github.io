@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jenkins on </title>
+    <link>https://ronbulaon.github.io/tags/jenkins/</link>
+    <description>Recent content in Jenkins on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Feb 2024 20:45:01 -0500</lastBuildDate>
+    <atom:link href="https://ronbulaon.github.io/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Jenkins</title>
+      <link>https://ronbulaon.github.io/posts/jenkins/</link>
+      <pubDate>Mon, 26 Feb 2024 20:45:01 -0500</pubDate>
+      <guid>https://ronbulaon.github.io/posts/jenkins/</guid>
+      <description>Jenkins is an open-source automation server that helps automate the building, testing, and deployment of software projects. Jenkins is widely used for its flexibility, extensive plugin ecosystem, and strong community support, making it an excellent choice for continuous integration and continuous delivery (CI/CD) needs.&#xA;This post is a step-by-step install guide for Jenkins on Ubuntu 24.04.&#xA;1. Install Java Since Jenkins is a Java-based application, we’ll need to install OpenJDK 17 for the latest and stable Jenkins setup.</description>
+    </item>
+  </channel>
+</rss>
