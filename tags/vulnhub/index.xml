@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vulnhub on </title>
+    <title>VulnHub on </title>
     <link>https://ronbulaon.github.io/tags/vulnhub/</link>
-    <description>Recent content in vulnhub on </description>
+    <description>Recent content in VulnHub on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 31 Mar 2023 10:21:07 -0500</lastBuildDate>
